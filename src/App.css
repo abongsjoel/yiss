@@ -2,3 +2,12 @@
   text-align: center;
 }
 
+.App img {
+  max-width: 500px;
+  height: auto;
+}
+
+.App p {
+  color: red;
+  font-weight: bold;
+}
