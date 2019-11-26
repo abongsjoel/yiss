@@ -10,7 +10,7 @@ import Aux from '../hoc/Auxilary';
 const Hero = () => {
     return (
         <Aux>
-        <div className="relative w-full bg-red-600 flex justify-center items-center">
+        <div className="relative flex justify-center items-center">
             <Img 
                 src={HeroImg} 
                 alt="Hero Image"
@@ -21,6 +21,14 @@ const Hero = () => {
                     txt="BE INNOVATIVE, BE DIFFERENT"
                 />
             </div>
+            {/* <div>
+                <h1>I also love to be centered</h1>
+                <p>Center Me</p>
+                <HeroMessage 
+                    src={HeroLogo}
+                    txt="BE INNOVATIVE, BE DIFFERENT"
+                />
+            </div> */}
         </div>
         </Aux>
     );

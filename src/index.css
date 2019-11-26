@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: 'neo-latina';
+  src: local('neo latina'), url(./fonts/neo-latina-demo-FFP.ttf) format('truetype');
+}

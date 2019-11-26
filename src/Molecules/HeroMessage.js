@@ -4,9 +4,9 @@ import Img from '../Atoms/Img';
 
 const HeroMessage = ({src, txt}) => {
     return (
-        <div className="hm_bg flex flex-col items-center w-3/4" >
-            <Img src={src} width="w-full" />
-            {/* <p>{txt}</p> */}
+        <div className="hm_bg w-3/4 m-auto py-4 md:w-full">
+            <Img src={src} width="" />
+            <p className="text-center pt-2 hero-font font-bold text-sm sm:text-2xl md:text-4xl lg:text-4xl">{txt}</p>
         </div>
     );  
 }

@@ -8347,9 +8347,67 @@ video {
 }
 
 .hm_bg {
-  /* width: 941px;
-    height: 200px; */
   background-color: rgba(255, 255, 255, .38);
+}
+
+.hero-font {
+  font-family: "neo latina";
+  color: red;
+  /* color: rgb(15, 91, 144); */
+  text-transform: uppercase;
+  line-height: 0.833;
+}
+
+m-10 {
+  margin: 0 10%;
+}
+
+w-100 {
+  width: 100px;
+}
+
+w-150 {
+  width: 150px;
+}
+
+w-200 {
+  width: 200px;
+}
+
+w-250 {
+  width: 250px;
+}
+
+w-300 {
+  width: 300px;
+}
+
+w-350 {
+  width: 350px;
+}
+
+w-400 {
+  width: 400px;
+}
+
+w-500 {
+  width: 500px;
+}
+
+w-600 {
+  width: 600px;
+}
+
+w-700 {
+  width: 700px;
+}
+
+w-800 {
+  width: 800px;
+}
+
+w-900 {
+  width: 900px;
 }
 
 @media (min-width: 640px) {

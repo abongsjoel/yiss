@@ -5,6 +5,8 @@ import './styles.css'; //For tailwindcss
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import './fonts/neo-latina-demo-FFP.ttf';
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
