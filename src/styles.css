@@ -8346,6 +8346,12 @@ video {
   z-index: auto;
 }
 
+.hm_bg {
+  /* width: 941px;
+    height: 200px; */
+  background-color: rgba(255, 255, 255, .38);
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

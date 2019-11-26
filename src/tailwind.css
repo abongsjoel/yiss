@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hm_bg {
+    /* width: 941px;
+    height: 200px; */
+    background-color: rgba(255, 255, 255, .38);
+}
