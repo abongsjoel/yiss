@@ -31,8 +31,8 @@
     line-height: 1.333;
 }
 
-.border-line {
-    background-color: rgba(35, 61, 116, 0.149);
+.c-border {
+    color: rgba(35, 61, 116, 0.149);
 }
 
 
@@ -51,6 +51,12 @@
 
 .c-main-footer {
     color: rgb(35, 61, 166);
+}
+
+/* Background Colors */
+
+bg-main:hover {
+    background-color: rgb(15, 117, 188);
 }
 
 
