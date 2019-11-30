@@ -5,11 +5,10 @@ import HeroMessage from '../Molecules/HeroMessage';
 
 import HeroImg from '../assets/images/hero-img.jpg';
 import HeroLogo from '../assets/logo/hero-logo.png';
-import Aux from '../hoc/Auxilary';
+// import Aux from '../hoc/Auxilary';
 
 const Hero = () => {
     return (
-        <Aux>
         <div className="relative flex justify-center items-center">
             <Img 
                 src={HeroImg} 
@@ -21,16 +20,7 @@ const Hero = () => {
                     txt="BE INNOVATIVE, BE DIFFERENT"
                 />
             </div>
-            {/* <div>
-                <h1>I also love to be centered</h1>
-                <p>Center Me</p>
-                <HeroMessage 
-                    src={HeroLogo}
-                    txt="BE INNOVATIVE, BE DIFFERENT"
-                />
-            </div> */}
         </div>
-        </Aux>
     );
 }
 

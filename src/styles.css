@@ -8346,16 +8346,55 @@ video {
   z-index: auto;
 }
 
+/* Hero Message background */
+
 .hm_bg {
   background-color: rgba(255, 255, 255, .38);
 }
 
+.container {
+  padding: 5% 10%;
+}
+
 .hero-font {
   font-family: "neo latina";
-  color: red;
-  /* color: rgb(15, 91, 144); */
+  color: rgb(15, 91, 144);
   text-transform: uppercase;
   line-height: 0.833;
+}
+
+.h1-font {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.h2-font {
+  font-size: 18px;
+  line-height: 1.333;
+}
+
+.border-line {
+  background-color: rgba(35, 61, 116, 0.149);
+}
+
+/* Heading Colors */
+
+.c-main {
+  color: rgb(15, 117, 188);
+}
+
+.c-secondary {
+  color: rgb(247, 148, 30);
+}
+
+.c-sub {
+  color: rgb(2, 44, 73);
+}
+
+.c-main-footer {
+  color: rgb(35, 61, 166);
 }
 
 m-10 {
