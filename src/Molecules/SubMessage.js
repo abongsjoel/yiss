@@ -9,7 +9,7 @@ const SubMessage = ({heading, messageBody}) => {
             <H2 text={heading} />
             <Para 
                 text={messageBody}
-                styles=" text-sm text-black text-justify"
+                styles=" text-sm text-gray-700 text-justify"
             />
         </div>
     );

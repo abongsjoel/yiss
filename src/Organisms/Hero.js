@@ -13,6 +13,7 @@ const Hero = () => {
             <Img 
                 src={HeroImg} 
                 alt="Hero Image"
+                styles="h-300 lg:h-auto"
             />
             <div className="absolute">
                 <HeroMessage 

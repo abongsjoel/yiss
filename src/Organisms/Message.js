@@ -11,15 +11,15 @@ const Message = () => {
     return (
         <div className="my-8 w-full">
             <H1 part1="Welcome to " part2="YISS" />
-            <div className="w-full mt-4 flex flex-col lg:flex-row lg:justify-between">
-                <div className="border-t mb-8 lg:mb-0 lg:w-1/2">
+            <div className="w-full mt-4 flex flex-col md:flex-row md:justify-between">
+                <div className="border-t mb-8 md:mb-0 md:w-1/2">
                     <MissionVision />
                     <div className="mt-8">
                         <Button text="Learn More" btnColor="blue" />
                     </div>
                </div>
-                <div className="lg:w-1/2">
-                    <div className="h-full lg:float-right lg:w-3/4"> 
+                <div className="md:w-1/2">
+                    <div className="h-full md:float-right md:w-3/4"> 
                         <Img 
                             src={WelcomeImg} 
                             alt="Welcome to YISS"
@@ -27,19 +27,6 @@ const Message = () => {
                         />
                     </div>
                </div>
-                
-                {/* <div className="flex-1 bg-gray-400 border-t c-border mt-4 pt-4   lg:pb-0 lg:pr-4 lg:mr-4 lg:w-1/2">
-                    <MissionVision />
-                    <div className="mt-8">
-                        <Button text="Learn More" btnColor="blue" />
-                    </div>
-                </div>
-                <div className="flex-1 bg-gray-400  mt-4 mb-8 shadow-2xl lg:ml-4 lg:w-1/2 lg:h-auto">
-                    <Img 
-                        src={WelcomeImg} 
-                        alt="Welcome to YISS"
-                    />
-                </div> */}
             </div>
         </div>
     );
