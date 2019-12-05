@@ -7,9 +7,13 @@
 .hm_bg {
     background-color: rgba(255, 255, 255, .38);
 }
-
 .container {
     padding: 5% 10%;
+}
+
+.tj-container {
+    padding: 5% 10%;
+    width: 100%;
 }
 
 .hero-font {

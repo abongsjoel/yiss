@@ -8356,6 +8356,11 @@ video {
   padding: 5% 10%;
 }
 
+.tj-container {
+  padding: 5% 10%;
+  width: 100%;
+}
+
 .hero-font {
   font-family: "neo latina";
   color: rgb(15, 91, 144);

@@ -3,9 +3,9 @@ import React from 'react';
 import H2 from '../Atoms/H2';
 import Para from '../Atoms/Para';
 
-const SmallMessage = ({heading, messageBody}) => {
+const SubMessage = ({heading, messageBody}) => {
     return (
-        <div className="mb-4">
+        <div className="mt-4">
             <H2 text={heading} />
             <Para 
                 text={messageBody}
@@ -16,4 +16,4 @@ const SmallMessage = ({heading, messageBody}) => {
     );
 }
 
-export default SmallMessage;
+export default SubMessage;

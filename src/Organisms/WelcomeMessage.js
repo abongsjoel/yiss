@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Message from '../Molecules/Message';
+import Message from './Message';
 
 const Welcome = () => {
     return (
-        <div className="container">
+        <div className="tj-container">
             <Message />
         </div>
     );

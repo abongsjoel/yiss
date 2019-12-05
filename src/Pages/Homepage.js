@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Hero from '../Organisms/Hero';
-import Welcome from '../Organisms/Welcome';
+import WelcomeMessage from '../Organisms/WelcomeMessage';
 
 
 import Aux from '../hoc/Auxilary';
@@ -10,7 +10,7 @@ const Homepage = () => {
     return (
         <Aux>
             <Hero />
-            <Welcome />
+            <WelcomeMessage />
         </Aux>   
     );
 }
