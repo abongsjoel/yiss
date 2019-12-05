@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Para = ({text, fontSize, fontColor}) => {
+const Para = ({text, styles}) => {
     return (
-        <p className={fontSize + " " + fontColor}>{text}</p>
+        <p className={styles}>{text}</p>
     );
 }
 

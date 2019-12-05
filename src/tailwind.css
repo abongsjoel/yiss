@@ -7,9 +7,8 @@
 .hm_bg {
     background-color: rgba(255, 255, 255, .38);
 }
-.container {
-    padding: 5% 10%;
-}
+
+.container { padding: 5% 10%; }
 
 .tj-container {
     padding: 5% 10%;
@@ -35,81 +34,43 @@
     line-height: 1.333;
 }
 
-.c-border {
-    color: rgba(35, 61, 116, 0.149);
-}
+.line-border { color: rgba(35, 61, 116, 0.149); }
 
 
 /* Heading Colors */
-.c-main {
-    color: rgb(15, 117, 188);
-}
+.c-main, .btn-border { color: rgb(15, 117, 188); }
 
-.c-secondary {
-    color: rgb(247, 148, 30);
-}
+.c-secondary {  color: rgb(247, 148, 30); }
 
-.c-sub {
-    color: rgb(2, 44, 73);
-}
+.c-sub {  color: rgb(2, 44, 73); }
 
-.c-main-footer {
-    color: rgb(35, 61, 166);
-}
-
-/* Background Colors */
-
-bg-main:hover {
-    background-color: rgb(15, 117, 188);
-}
+.c-main-footer { color: rgb(35, 61, 166); }
 
 
+/* Widths */
+.w-100 { width: 100px; }
+.w-150 { width: 150px; }
+.w-200 {  width: 200px; }
+.w-250 {  width: 250px; }
+.w-300 { width: 300px; }
+.w-350 { width: 350px; }
+.w-400 { width: 400px; }
+.w-500 { width: 500px; }
+.w-600 { width: 600px; }
+.w-700 { width: 700px; }
+.w-800 { width: 800px; }
+.w-900 { width: 900px; }
 
-
-m-10 {
-    margin: 0 10%;
-}
-
-
-
-w-100 {
-    width: 100px;
-}
-
-w-150 {
-    width: 150px;
-}
-
-w-200 {
-    width: 200px;
-}
-w-250 {
-    width: 250px;
-}
-
-w-300 {
-    width: 300px;
-}
-w-350 {
-    width: 350px;
-}
-w-400 {
-    width: 400px;
-}
-w-500 {
-    width: 500px;
-}
-w-600 {
-    width: 600px;
-}
-w-700 {
-    width: 700px;
-}
-
-w-800 {
-    width: 800px;
-}
-
-w-900 {
-    width: 900px;
-}
+/* Heights */
+.h-100 { height: 100px; }
+.h-150 { height: 150px; }
+.h-200 { height: 200px; }
+.h-250 { height: 250px; }
+.h-300 { height: 300px; }
+.h-350 { height: 350px; }
+.h-400 { height: 400px; }
+.h-500 { height: 500px; }
+.h-600 { height: 600px; }
+.h-700 { height: 700px; }
+.h-800 { height: 800px; }
+.h-900 { height: 900px; }
