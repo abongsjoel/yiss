@@ -8352,7 +8352,9 @@ video {
   background-color: rgba(255, 255, 255, .38);
 }
 
-.container { padding: 5% 10%;
+@media only screen and (max-width: 500px) {
+  .container { padding: 5% 10%;
+  }
 }
 
 .tj-container {
@@ -8366,7 +8368,7 @@ video {
 }
 
 @media only screen and (max-width: 760px) {
-  .tj-container-big { padding: 5% 10%;
+  .tj-container-big { padding: 5% 0;
   }
 }
 

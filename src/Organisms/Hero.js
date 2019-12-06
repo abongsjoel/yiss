@@ -17,6 +17,7 @@ const Hero = () => (
         <div className="absolute">
             <HeroMessage 
                 src={HeroLogo}
+                alt="Young investor's Science Society"
                 txt="BE INNOVATIVE, BE DIFFERENT"
             />
         </div>

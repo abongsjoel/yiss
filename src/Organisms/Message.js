@@ -1,11 +1,8 @@
 import React from 'react';
 
 import H1 from '../Atoms/H1';
-import MissionVision from '../Molecules/Specific/MissionVision';
 import Button from '../Atoms/Button';
 import Img from '../Atoms/Img';
-
-import WelcomeImg from '../assets/images/welcome.jpg';
 
 const Message = ({headingpart1, headingpart2, content, imgSrc, imgAlt}) => (
     <div className="my-8 w-full">

@@ -5,9 +5,9 @@ import H2 from '../../Atoms/H2';
 import Li from '../../Atoms/Li';
 
 const Objectives = () => (
-    <div className="w-full h-full bg-blue-700 py-12 px-8 flex">
+    <div className="w-full h-full bg-blue-700 py-12 px-8 flex ">
         <div className=" my-auto">
-            <H2 text="YISS has an objective to:" textColor=" text-white "/>
+            <H2 text="YISS has an objective to:" textColor=" text-white mb-4 "/>
             <ul className="sm:pl-4">
                 <Li text="Capacity building of young health science researchsers" />
                 <Li text="Attract young scientists to the field of research" />
