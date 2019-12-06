@@ -14,6 +14,7 @@ const ObjectivesSection = () => (
             imgSrc={objectives}
             imgAlt="Objectives of YISS"
             content={<Objectives />}
+            bgColor="bg-blue-700"
         />
     </div>
 );

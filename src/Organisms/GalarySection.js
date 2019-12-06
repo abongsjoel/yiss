@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Galary from '../Molecules/Galary';
+
 const GalarySection = () => (
-    <div>I am the Galary Section</div>
+    <div>
+        <Galary />
+    </div>
 );
 
 export default GalarySection;
