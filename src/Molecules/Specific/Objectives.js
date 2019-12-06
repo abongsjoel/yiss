@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Button from '../Atoms/Button';
-import H2 from '../Atoms/H2';
-import Li from '../Atoms/Li';
+import Button from '../../Atoms/Button';
+import H2 from '../../Atoms/H2';
+import Li from '../../Atoms/Li';
 
 const Objectives = () => (
     <div className="w-full h-full bg-blue-700 py-12 px-8 flex">
-        <div className="item-center my-auto">
+        <div className=" my-auto">
             <H2 text="YISS has an objective to:" textColor=" text-white "/>
             <ul className="sm:pl-4">
                 <Li text="Capacity building of young health science researchsers" />

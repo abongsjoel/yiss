@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Objectives from '../Molecules/Objectives';
+import Objectives from '../Molecules/Specific/Objectives';
 import Img from '../Atoms/Img';
 
 import objectives from '../assets/images/objectives.png';

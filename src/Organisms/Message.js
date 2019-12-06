@@ -7,12 +7,12 @@ import Img from '../Atoms/Img';
 
 import WelcomeImg from '../assets/images/welcome.jpg';
 
-const Message = () => (
+const Message = ({headingpart1, headingpart2, content, imgSrc, imgAlt}) => (
     <div className="my-8 w-full">
-        <H1 part1="Welcome to " part2="YISS" />
+        <H1 part1={headingpart1} part2={headingpart2} />
         <div className="w-full mt-4 flex flex-col md:flex-row md:justify-between">
             <div className="border-t mb-8 md:mb-0 md:w-1/2">
-                <MissionVision />
+                {content}
                 <div className="mt-8">
                     <Button text="Learn More" btnColor="blue" />
                 </div>
@@ -20,8 +20,8 @@ const Message = () => (
             <div className="md:w-1/2">
                 <div className="h-full md:ml-auto md:w-3/4"> 
                     <Img 
-                        src={WelcomeImg} 
-                        alt="Welcome to YISS"
+                        src={imgSrc} 
+                        alt={imgAlt}
                         styles=" rounded-lg shadow-lg hover:shadow-2xl"
                     />
                 </div>
