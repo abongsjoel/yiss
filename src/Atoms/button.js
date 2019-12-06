@@ -6,9 +6,10 @@ const Button = ({text, btnColor}) => {
     if (btnColor === "white") {
         changingStyle = "hover:bg-white text-white  border-white hover:text-blue-700";
     }
-    const fixedStyle = "bg-transparent font-semibold py-1 px-8 border hover:border-transparent rounded text-sm";
+    const fixedStyle = "bg-transparent font-semibold inline-block py-1 px-8 border hover:border-transparent rounded text-sm";
+    
     return (
-        <button className={fixedStyle + " " + changingStyle}>{text}</button>
+        <a href="#" className={fixedStyle + " " + changingStyle}>{text}</a>
     );
 }
 

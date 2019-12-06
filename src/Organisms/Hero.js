@@ -7,22 +7,20 @@ import HeroImg from '../assets/images/hero-img.jpg';
 import HeroLogo from '../assets/logo/hero-logo.png';
 // import Aux from '../hoc/Auxilary';
 
-const Hero = () => {
-    return (
-        <div className="relative flex justify-center items-center">
-            <Img 
-                src={HeroImg} 
-                alt="Hero Image"
-                styles="h-300 lg:h-auto"
+const Hero = () => (
+    <div className="relative flex justify-center items-center">
+        <Img 
+            src={HeroImg} 
+            alt="Hero Image"
+            styles="h-300 lg:h-auto"
+        />
+        <div className="absolute">
+            <HeroMessage 
+                src={HeroLogo}
+                txt="BE INNOVATIVE, BE DIFFERENT"
             />
-            <div className="absolute">
-                <HeroMessage 
-                    src={HeroLogo}
-                    txt="BE INNOVATIVE, BE DIFFERENT"
-                />
-            </div>
         </div>
-    );
-}
+    </div>
+);
 
 export default Hero;

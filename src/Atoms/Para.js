@@ -2,7 +2,7 @@ import React from 'react';
 
 const Para = ({text, styles}) => {
     return (
-        <p className={styles}>{text}</p>
+        <p className={"text-gray-700 text-justify " +styles}>{text}</p>
     );
 }
 

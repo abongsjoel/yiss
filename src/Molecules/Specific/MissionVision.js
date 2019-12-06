@@ -2,16 +2,15 @@ import React from 'react';
 
 import SubMessage from '../SubMessage';
 
-const WelcomeMessage = () => {
- return (
+const WelcomeMessage = () => (
      <div >
-         <SubMessage 
+        <SubMessage 
             heading="Our Mission"
-            messageBody="The Young Investigators Science Society brings together early career health sciences 
+            messageBody="The Young Investigators Science Society brings together early career health science 
             researchers with the goal of building their research capacities and promoting communication 
             and collaboration among them."
         />
-         <SubMessage 
+        <SubMessage 
             heading="Our Vision"
             messageBody="YISS aspires to form a community of world-class competent and motivated young investigators
             capable of engaging in independent research to solve varying health problems which plague
@@ -19,6 +18,6 @@ const WelcomeMessage = () => {
         />
      </div>
  );
-}
+
 
 export default WelcomeMessage;

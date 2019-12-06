@@ -8360,6 +8360,16 @@ video {
   width: 100%;
 }
 
+.tj-container-big {
+  padding: 0 5%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 760px) {
+  .tj-container-big { padding: 5% 10%;
+  }
+}
+
 .hero-font {
   font-family: "neo latina";
   color: rgb(15, 91, 144);

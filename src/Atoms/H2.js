@@ -1,10 +1,13 @@
 import React from 'react';
 
-const H2 = ({text}) => {
+const H2 = ({text, textColor}) => {
+    let changningStyles = " c-sub ";
+    if (textColor) {
+        changningStyles = textColor;
+    }
+    const fixedStyles = " h2-font mb-2 "
     return (
-        <div className="h2-font mb-2">
-            <h2 className="c-sub">{text}</h2>
-        </div>
+        <h2 className={ fixedStyles + changningStyles }>{text}</h2>
     );
 }
 
