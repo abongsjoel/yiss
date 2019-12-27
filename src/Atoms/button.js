@@ -9,7 +9,7 @@ const Button = ({text, btnColor}) => {
     const fixedStyle = "bg-transparent font-semibold inline-block py-1 px-8 border hover:border-transparent rounded text-sm";
     
     return (
-        <a href="#" className={fixedStyle + " " + changingStyle}>{text}</a>
+        <button type="button" className={fixedStyle + " " + changingStyle}>{text}</button>
     );
 }
 

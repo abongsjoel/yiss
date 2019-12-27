@@ -18,8 +18,8 @@ const Message2 = ({imgSrc, imgAlt, content, bgColor}) => (
                 </div>
             </div>
         </div>
-        <div className="md:w-1/2 md:hidden">
-            <Img src={imgSrc} alt={imgAlt} />
+        <div className="relative pb-full sm:pb-1/2 md:w-1/2 md:hidden">
+            <Img src={imgSrc} alt={imgAlt} styles=" absolute" />
         </div> 
     </div>
 );
