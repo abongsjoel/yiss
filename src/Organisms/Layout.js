@@ -6,10 +6,9 @@ import Aux from '../hoc/Auxilary';
 const layout = ( props ) => (
     <Aux>
         <Header />
-        <main>
+        <main className="mt-16">
             {props.children}
         </main>
-        <div>Toolbar, SideDrawer, Backdrop</div>
     </Aux>
 );
 

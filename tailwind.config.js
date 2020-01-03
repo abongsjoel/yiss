@@ -3,6 +3,14 @@ module.exports = {
     extend: {
       colors: {
         gallery: '#eff8fe',
+
+        main: {
+          100: '#02416d'
+        },  
+
+        sec: {
+          100: '#f7941e'
+        }
       },
 
       spacing: {
