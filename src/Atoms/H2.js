@@ -1,9 +1,9 @@
 import React from 'react';
 
-const H2 = ({text, textColor}) => {
+const H2 = ({text, styles}) => {
     let changningStyles = " c-sub ";
-    if (textColor) {
-        changningStyles = textColor;
+    if (styles) {
+        changningStyles = styles;
     }
     const fixedStyles = " h2-font mb-2 "
     return (

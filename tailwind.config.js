@@ -5,7 +5,9 @@ module.exports = {
         gallery: '#eff8fe',
 
         main: {
-          100: '#02416d'
+          100: '#02416d',    //dark blue
+          200: '#0f75bc',    //logo blue
+          300: '#233d74',    //footer header
         },  
 
         sec: {

@@ -7,7 +7,7 @@ import Aux from '../../hoc/Auxilary';
 
 const Objectives = () => (
     <Aux>
-        <H2 text="YISS has an objective to:" textColor=" text-white mb-4 "/>
+        <H2 text="YISS has an objective to:" styles=" text-white mb-4 "/>
         <ul className="sm:pl-4">
             <Li text="Capacity building of young health science researchsers" />
             <Li text="Attract young scientists to the field of research" />
