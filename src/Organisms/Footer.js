@@ -43,7 +43,7 @@ const Footer = () => {
                                 Object.keys(CONTACTINFO)
                                     .map(contact => {
                                         return (
-                                            <li className="flex items-center" key={contact}>
+                                            <li className="flex items-center md:pb-2" key={contact}>
                                                 <img src={CONTACTINFO[contact]} alt="" className="h-3 pr-1"/>
                                                 <p className={itemStyles}>{contact}</p>
                                             </li>
@@ -57,9 +57,9 @@ const Footer = () => {
                         <div>
                             <FooterHeader header="Address"/>
                             <ul>
-                                <li className={itemStyles}>Biyem Assi</li>
-                                <li className={itemStyles}>Yaounde</li>
-                                <li className={itemStyles}>Cameroon</li>
+                                <li className={itemStyles +" md:pb-2"}>Biyem Assi</li>
+                                <li className={itemStyles +" md:pb-2"}>Yaounde</li>
+                                <li className={itemStyles +" md:pb-2"}>Cameroon</li>
                             </ul>
                         </div>
                     </div>

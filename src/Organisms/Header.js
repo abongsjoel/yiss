@@ -57,7 +57,7 @@ const Header = () => {
                     </div>
                 </div>
                 <nav className={menuStyle + " md:pb-0 uppercase bg-white text-main-300 md:text-xs lg:text-sm md:flex"}>
-                    <NavItems menu={MENU} styles="py-3 pl-4 md:pl-8 lg:pl-12 pr-0" />
+                    <NavItems menu={MENU} styles="py-3 pl-4 md:pl-8 lg:pl-12 pr-0 md:flex md:items-end" />
                 </nav>
             </header>
         </Aux>
