@@ -610,6 +610,20 @@ video {
   }
 }
 
+/* SideMenu Transition */
+
+.slideTransition {
+  transition: transform 0.3s ease-out;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(-100%)
+}
+
 /* Hero Message background */
 
 .hm_bg {
