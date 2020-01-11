@@ -610,7 +610,7 @@ video {
   }
 }
 
-/* SideMenu Transition */
+/* SideMenu Transition - not used*/
 
 .slideTransition {
   transition: transform 0.3s ease-out;

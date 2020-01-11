@@ -11,13 +11,13 @@ import pic4 from '../assets/galleryImages/pic4.jpg';
 import pic5 from '../assets/galleryImages/pic5.jpg';
 
 const Galary = () => (
-    <div className="w-full bg-gallery flex tj-container">
+    <div className="w-full bg-gallery flex px-1/10 py-8 md:py-12">
         <div className="w-full text-center">
             <H1
                 part1="YISS"
                 part2=" In Pictures" 
             />
-            <div className="flex my-4 md:my-8">
+            <div className="flex my-8 md:my-12">
                 <div className="w-1/4 hidden sm:block">
                     <Img src={pic1}/>
                 </div>
