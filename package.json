@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "docz": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,7 +16,10 @@
     "eject": "react-scripts eject",
     "build:styles": "postcss src/tailwind.css -o src/styles.css",
     "prebuild": "npm run build:styles",
-    "prestart": "npm run build:styles"
+    "prestart": "npm run build:styles",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,8 +37,8 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.2",
-    "postcss-cli": "^6.1.3",
-    "tailwindcss": "^1.1.3"
+    "autoprefixer": "^9.7.3",
+    "postcss-cli": "^7.1.0",
+    "tailwindcss": "^1.1.4"
   }
 }

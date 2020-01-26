@@ -4,9 +4,9 @@ import Homepage from './Pages/Homepage';
 
 function App() {
   return (  
-        <Layout>
-          <Homepage />
-        </Layout>
+    <Layout>
+      <Homepage />
+    </Layout>
   );
 }
 

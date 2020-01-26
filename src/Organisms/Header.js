@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Logo from '../assets/logo/logo.png';
 
 import NavItems from '../Molecules/NavItems';
+import NavItem from '../Molecules/NavItem';
 import Img from '../Atoms/Img';
 import Backdrop from '../Atoms/Backdrop/Backdrop';
 
@@ -35,6 +36,8 @@ const Header = () => {
         menuStyle = "hidden";
     }
 
+    const itemStyles = "py-3 pl-4 md:pl-8 lg:pl-12 pr-0 md:flex md:items-end";
+
     return (
         <Aux>
             <Backdrop show={showSideMenu} clicked={toggleMenu} />
@@ -57,7 +60,14 @@ const Header = () => {
                     </div>
                 </div>
                 <nav className={menuStyle + " md:pb-0 uppercase bg-white text-main-300 md:text-xs lg:text-sm md:flex"}>
-                    <NavItems menu={MENU} active={false} styles="py-3 pl-4 md:pl-8 lg:pl-12 pr-0 md:flex md:items-end" />
+                    {/* <NavItems menu={MENU} active={false} styles="py-3 pl-4 md:pl-8 lg:pl-12 pr-0 md:flex md:items-end" /> */}
+                    <ul className="flex pt-2">
+                        <NavItem link="/" menuItem="Home" active styles={itemStyles} />
+                        <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} />
+                        <NavItem link='/our-values' menuItem="Our Values" styles={itemStyles} />
+                        <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} />
+                        <NavItem link='/contact-us' menuItem="Contact Us" styles={itemStyles} />
+                    </ul>
                 </nav>
             </header>
         </Aux>
