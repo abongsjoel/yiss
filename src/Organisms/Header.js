@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Logo from '../assets/logo/logo.png';
 
@@ -34,7 +35,9 @@ const Header = () => {
             <header className="fixed top-0 bg-white z-50 w-full px-1/10 md:flex md:justify-between md:items-center">
                 <div className="py-4 flex justify-between items-center">
                     <div className="h-auto w-20">
-                        <Img src={Logo} alt="Logo" />
+                        <NavLink to="/">
+                            <Img src={Logo} alt="Logo" />
+                        </NavLink>
                     </div>
                     <div className="md:hidden">
                         <button 
@@ -49,9 +52,9 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
-                <nav className={menuStyle + " md:pb-0 uppercase bg-white text-main-300 md:text-xs lg:text-sm md:flex"}>
+                <nav className={menuStyle + " md:pb-0 uppercase bg-white text-main-100 md:text-xs lg:text-sm md:flex"}>
                     <ul className="md:flex md:pt-2">
-                        <NavItem link="/" menuItem="Home" active styles={itemStyles} />
+                        <NavItem link="/" exact menuItem="Home" styles={itemStyles} />
                         <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} />
                         <NavItem link='/our-values' menuItem="Our Values" styles={itemStyles} />
                         <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} />

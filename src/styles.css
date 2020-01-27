@@ -624,6 +624,13 @@ video {
   transform: translateX(-100%)
 }
 
+.active {
+  color: #f7941e;
+  font-weight: 700;
+  border-bottom-width: 2px;
+  border-color: #f7941e;
+}
+
 /* Hero Message background */
 
 .hm_bg {

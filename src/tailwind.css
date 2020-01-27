@@ -15,6 +15,10 @@
     transform: translateX(-100%)
 }
 
+.active {
+    @apply text-sec-100 font-bold border-b-2 border-sec-100;
+}
+
 /* Hero Message background */
 .hm_bg {
     background-color: rgba(255, 255, 255, .38);
