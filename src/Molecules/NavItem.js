@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavItem = ({link, menuItem, active, styles}) => { 
     let linkStyle = "inline text-main-100 md:block hover:text-sec-100 focus:outline-none pb-2 hover:border-b-2 hover:border-sec-100";
@@ -7,12 +8,12 @@ const NavItem = ({link, menuItem, active, styles}) => {
     }
     return (
         <li className={styles +" list-none"}>
-            <a 
-                href={link}
+            <NavLink 
+                to={link}
                 className={linkStyle}
             >
                 {menuItem}
-            </a>
+            </NavLink>
         </li>
     );
 }
