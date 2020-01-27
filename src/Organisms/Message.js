@@ -11,7 +11,7 @@ const Message = ({headingpart1, headingpart2, content, imgSrc, imgAlt}) => (
             <div className="border-t mb-8 md:mb-0 md:w-1/2 md:mr-4 ">
                 {content}
                 <div className="mt-8">
-                    <Button text="Learn More" btnColor="blue" />
+                    <Button link="about-us" text="Learn More" btnColor="blue" />
                 </div>
             </div>
             <div className="md:w-1/2 md:ml-4">

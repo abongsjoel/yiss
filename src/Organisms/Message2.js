@@ -13,7 +13,7 @@ const Message2 = ({imgSrc, imgAlt, content, bgColor}) => (
                 <div className=" my-auto">
                     {content}
                     <div className="mt-8">
-                        <Button text="Learn More" btnColor="white" />
+                        <Button link="about-us" text="Learn More" btnColor="white" />
                     </div>
                 </div>
             </div>
