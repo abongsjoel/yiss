@@ -17,6 +17,10 @@ const Header = () => {
         setShowSideMenu(!showSideMenu);
     }
 
+    const closeMenu = () => {
+        setShowSideMenu(false);
+    }
+
     let iconStyle = null;
     let menuStyle = null;
     if (showSideMenu) {
@@ -54,11 +58,11 @@ const Header = () => {
                 </div>
                 <nav className={menuStyle + " md:pb-0 uppercase bg-white text-main-100 md:text-xs lg:text-sm md:flex"}>
                     <ul className="md:flex md:pt-2">
-                        <NavItem link="/" exact menuItem="Home" styles={itemStyles} />
-                        <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} />
-                        <NavItem link='/our-values' menuItem="Our Values" styles={itemStyles} />
-                        <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} />
-                        <NavItem link='/contact-us' menuItem="Contact Us" styles={itemStyles} />
+                        <NavItem link="/" exact menuItem="Home" styles={itemStyles} clicked={closeMenu} />
+                        <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} clicked={closeMenu} />
+                        <NavItem link='/our-values' menuItem="Our Values" styles={itemStyles} clicked={closeMenu} />
+                        <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} clicked={closeMenu} />
+                        <NavItem link='/contact-us' menuItem="Contact Us" styles={itemStyles} clicked={closeMenu} />
                     </ul>
                 </nav>
             </header>
