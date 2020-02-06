@@ -14,7 +14,7 @@ const Galary = () => (
     <div className="w-full bg-gallery flex px-1/10 py-8 md:py-12">
         <div className="w-full text-center">
             <H1
-                part1="YISS"
+                part1="YISS 2"
                 part2=" In Pictures" 
             />
             <div className="flex my-8 md:my-12">
