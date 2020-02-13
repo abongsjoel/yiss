@@ -1,3 +1,5 @@
+/* Message with a transparent background */
+
 import React from 'react';
 
 import H1 from '../Atoms/H1';

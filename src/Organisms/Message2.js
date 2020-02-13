@@ -1,3 +1,5 @@
+/* Message with a colored background */
+
 import React from 'react';
 
 import Img from '../Atoms/Img';
