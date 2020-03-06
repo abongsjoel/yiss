@@ -1,15 +1,20 @@
 import React from 'react';
 
-import Hero from '../Organisms/Hero';
+import PageHeader from '../Organisms/pageHeader';
 
 import Aux from '../hoc/Auxilary';
 
+import HeaderImage from '../assets/images/communities.jpg';
+
 const ContactUsPage = () => (
     <Aux>
-        <Hero />
-        <div className="flex justify-center font-bold text-4xl py-8">
-            <p>Hello and Welcome. <br /><br />This is the contact us page</p>
+        <PageHeader pageName="Get in touch" headerImage={HeaderImage} />
+        
+        <div className="tj-container">
+           
+            
         </div>
+
     </Aux>   
 );
 
