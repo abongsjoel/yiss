@@ -4,11 +4,11 @@ import PageHeader from '../Organisms/pageHeader';
 
 import Aux from '../hoc/Auxilary';
 
-import HeaderImage from '../assets/images/communities.jpg';
+import HeaderImage from '../assets/images/blog-header.JPG';
 
 const Blog = () => (
     <Aux>
-        <PageHeader pageName="Blog" headerImage={HeaderImage} />
+        <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
         
         <div className="tj-container">
            
