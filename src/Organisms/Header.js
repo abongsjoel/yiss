@@ -61,10 +61,7 @@ const Header = () => {
                     <ul className="md:flex md:pt-2">
                         <NavItem link="/" exact menuItem="Home" styles={itemStyles} clicked={closeMenu} />
                         <NavItems styles={itemStyles} clicked={closeMenu}/>
-                        {/* <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} clicked={closeMenu} />
-                        <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} clicked={closeMenu} />
-                        <NavItem link='/blog' menuItem="Blog" styles={itemStyles} clicked={closeMenu} /> */}
-                        <NavItem link='/contact-us' menuItem="Contact Us" styles={itemStyles} clicked={closeMenu} />
+                        {/* <NavItem link='/contact-us' menuItem="Contact Us" styles={itemStyles} clicked={closeMenu} /> */}
                     </ul>
                 </nav>
             </header>
