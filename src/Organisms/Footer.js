@@ -5,7 +5,7 @@ import phoneIcon from '../assets/icons/phone.png';
 import bigLogo from '../assets/logo/big-logo.png';
 
 import FooterHeader from '../Molecules/FooterHeader';
-import NavItem from '../Molecules/NavItem';
+import NavItems from '../Molecules/NavItems';
 
 const CONTACTINFO = {
     'info@yiss.com': mailIcon,
@@ -26,9 +26,7 @@ const Footer = () => {
                         <div>
                             <FooterHeader header="Quick Links"/>
                             <ul>
-                                <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} />
-                                <NavItem link='/our-values' menuItem="Our Values" styles={itemStyles} />
-                                <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} />
+                                <NavItems styles={itemStyles} />
                             </ul>
                         </div>
                     </div>

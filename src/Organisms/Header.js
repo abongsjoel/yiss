@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Logo from '../assets/logo/logo.png';
 
 import NavItem from '../Molecules/NavItem';
+import NavItems from '../Molecules/NavItems';
 import Img from '../Atoms/Img';
 import Backdrop from '../Atoms/Backdrop/Backdrop';
 
@@ -59,9 +60,10 @@ const Header = () => {
                 <nav className={menuStyle + " md:pb-0 uppercase bg-white text-main-100 md:text-xs lg:text-sm md:flex"}>
                     <ul className="md:flex md:pt-2">
                         <NavItem link="/" exact menuItem="Home" styles={itemStyles} clicked={closeMenu} />
-                        <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} clicked={closeMenu} />
-                        <NavItem link='/our-values' menuItem="Our Values" styles={itemStyles} clicked={closeMenu} />
+                        <NavItems styles={itemStyles} clicked={closeMenu}/>
+                        {/* <NavItem link='/about-us' menuItem="About Us" styles={itemStyles} clicked={closeMenu} />
                         <NavItem link='/our-communities' menuItem="Our Communities" styles={itemStyles} clicked={closeMenu} />
+                        <NavItem link='/blog' menuItem="Blog" styles={itemStyles} clicked={closeMenu} /> */}
                         <NavItem link='/contact-us' menuItem="Contact Us" styles={itemStyles} clicked={closeMenu} />
                     </ul>
                 </nav>
