@@ -7,9 +7,9 @@ import Aux from '../hoc/Auxilary';
 
 import HeaderImage from '../assets/images/communities.jpg';
 
-const OurCommunitiesPage = () => (
+const Blog = () => (
     <Aux>
-        <PageHeader pageName="Yiss Communities" headerImage={HeaderImage} />
+        <PageHeader pageName="Blog" headerImage={HeaderImage} />
         
         <div className="tj-container">
             <SubMessage 
@@ -54,4 +54,4 @@ const OurCommunitiesPage = () => (
     </Aux>   
 );
 
-export default OurCommunitiesPage;
+export default Blog;
