@@ -16,3 +16,8 @@ code {
   font-family: 'neo-latina';
   src: local('neo latina'), url(./fonts/neo-latina-demo-FFP.ttf) format('truetype');
 }
+
+@font-face {
+  font-family: 'georgia';
+  src: local('georgia'), url(./fonts/georgia.ttf) format('truetype');
+}

@@ -7,6 +7,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import './fonts/neo-latina-demo-FFP.ttf';
+import './fonts/georgia.ttf';
 
 const app = (
     <BrowserRouter>
