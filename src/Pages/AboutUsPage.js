@@ -11,7 +11,7 @@ import HeaderImage from '../assets/images/about-1.jpg';
 
 const AboutUsPage = () => (
     <Aux>
-        <PageHeader pageName="About Yiss" headerImage={HeaderImage} />
+        <PageHeader pageName="About Yiss" headerImage={HeaderImage} className=' object-bottom ' />
         
         <div className="tj-container">
             <SubMessage 
