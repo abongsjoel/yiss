@@ -637,6 +637,10 @@ video {
   background-color: rgba(255, 255, 255, .38);
 }
 
+.hm_bg-black {
+  background-color: rgba(0, 0, 0, .50);
+}
+
 @media only screen and (max-width: 500px) {
   .container { padding: 5% 10%;
   }
