@@ -40,7 +40,7 @@ const Galary = () => (
                 </div>
             </div>
             <div className="mt-8">
-                <Button link="about-us" text="View All" btnColor="blue" />
+                <Button link="" text="View All" btnColor="blue" />
             </div>
         </div>
     </div>
