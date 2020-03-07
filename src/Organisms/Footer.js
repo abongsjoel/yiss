@@ -17,6 +17,9 @@ const Footer = () => {
     const itemStyles = "text-xs pb-1 text-gray-800";
     return (
         <footer>
+            <div className="sm:px-1/10">
+                <hr className="md:mt-0" />
+            </div>
             <div className="sm:px-1/10 md:flex md:justify-end md:items-center pt-10">
                 <div className="hidden md:inline-block md:w-2/5 lg:w-1/2">
                     <img src={bigLogo} alt="YISS" className="h-16 lg:h-20" />
