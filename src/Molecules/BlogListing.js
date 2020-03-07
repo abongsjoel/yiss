@@ -1,17 +1,16 @@
 import React from 'react';
 
-import PageHeader from '../Organisms/pageHeader';
+import H1 from '../Atoms/H1';
+import Para from '../Atoms/Para';
 
 import Aux from '../hoc/Auxilary';
 
-import HeaderImage from '../assets/images/blog-header.JPG';
-
-const BlogListing = () => (
+const BlogListing = ({title, body}) => (
     <Aux>
-        <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
-        
-        <div className="tj-container">
-           
+        <H1 part1={title} />
+        <Para text={body} styles="pt-6" />
+        <p className="text-sec-100">Read More</p>
+        <div>
             
         </div>
 
