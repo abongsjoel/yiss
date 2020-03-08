@@ -1,7 +1,6 @@
 import React from 'react';
 
 import H1 from '../Atoms/H1';
-import Img from '../Atoms/Img';
 import Button from '../Atoms/Button';
 import GalaryImg from '../Atoms/GalaryImg'
 

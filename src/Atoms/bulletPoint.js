@@ -1,6 +1,6 @@
 import React from 'react';
 
-import bullets from '../assets/icons/left-arrow.svg';
+// import bullets from '../assets/icons/left-arrow.svg';
 
 const BulletPoint = ({text}) => (
     <div className="my-3 lg:my-4 flex">

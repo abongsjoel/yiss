@@ -20,7 +20,9 @@ const Blog = () => (
                 tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
                 Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
                 Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor"
-                pic={drSmikes}
+                authorPic={drSmikes}
+                authorName="Dr. Acho Fon"
+                publishedDate="03 March 2020"
            />
             
         </div>
