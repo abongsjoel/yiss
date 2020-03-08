@@ -17,7 +17,7 @@ const Footer = () => {
     const itemStyles = "text-xs pb-1 text-gray-800";
     return (
         <footer>
-            <div className="sm:px-1/10">
+            <div className="px-1/10">
                 <hr className="md:mt-0" />
             </div>
             <div className="sm:px-1/10 md:flex md:justify-end md:items-center pt-10">
