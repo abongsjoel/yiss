@@ -2,10 +2,12 @@ import React from 'react';
 
 import PageHeader from '../Organisms/pageHeader';
 import BlogListing from '../Molecules/BlogListing';
+import HeaderImage from '../assets/images/blog-header.JPG';
+
+import drSmikes from '../assets/images/doc.jpg';
 
 import Aux from '../hoc/Auxilary';
 
-import HeaderImage from '../assets/images/blog-header.JPG';
 
 const Blog = () => (
     <Aux>
@@ -18,6 +20,7 @@ const Blog = () => (
                 tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
                 Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
                 Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor"
+                pic={drSmikes}
            />
             
         </div>
