@@ -16,7 +16,9 @@ const BlogListing = ({title, body, authorPic, authorName, publishedDate, firstBl
             {separatingLine}
             <H1 part1={title} />
             <Para text={body} styles="pt-6" />
-            <p className="text-sec-100">Read More</p>
+            <a href="/blog/article">
+                <p className="text-sec-100">Read More</p>
+            </a>
             <div className="flex items-center mt-4">
                 <img src={authorPic} alt="" className="w-6 h-6 rounded-full border-1 border-gray-100 mr-4 " />
                 <Para text={authorName} styles='text-sm mr-4' />

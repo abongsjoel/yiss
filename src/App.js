@@ -6,6 +6,7 @@ import Homepage from './Pages/Homepage';
 import AboutUsPage from './Pages/AboutUsPage';
 import OurCommunitiesPage from './Pages/OurCommunitiesPage';
 import BlogPage from './Pages/BlogPage';
+import BlogArticle from './Pages/BlogArticlePage';
 import ContactUsPage from './Pages/ContactUsPage';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/about-us" component={AboutUsPage} />
         <Route path="/our-communities" component={OurCommunitiesPage} />
+        <Route path="/blog/article" component={BlogArticle} />
         <Route path="/blog" component={BlogPage} />
         <Route path="/contact-us" component={ContactUsPage} />
         <Route path="/" component={Homepage} />
