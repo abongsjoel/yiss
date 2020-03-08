@@ -3,8 +3,6 @@ import React from 'react';
 import H1 from '../Atoms/H1';
 import Para from '../Atoms/Para';
 
-
-
 import Aux from '../hoc/Auxilary';
 
 const BlogListing = ({title, body, authorPic, authorName, publishedDate, firstBlog}) => {
