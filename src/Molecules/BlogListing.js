@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import H1 from '../Atoms/H1';
 import Para from '../Atoms/Para';
@@ -14,9 +15,12 @@ const BlogListing = ({title, body, authorPic, authorName, publishedDate, firstBl
             {separatingLine}
             <H1 part1={title} />
             <Para text={body} styles="pt-6" />
-            <a href="/blog/article">
+            <Link to="/blog/article">
                 <p className="text-sec-100">Read More</p>
-            </a>
+            </Link>
+            {/* <a href="/blog/article">
+                <p className="text-sec-100">Read More</p>
+            </a> */}
             <div className="flex items-center mt-4">
                 <img src={authorPic} alt="" className="w-6 h-6 rounded-full border-1 border-gray-100 mr-4 " />
                 <Para text={authorName} styles='text-sm mr-4' />
