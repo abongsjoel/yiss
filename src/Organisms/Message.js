@@ -16,7 +16,7 @@ const Message = ({headingpart1, headingpart2, content, imgSrc, imgAlt}) => (
                     <Button link="about-us" text="Learn More" btnColor="blue" />
                 </div>
             </div>
-            <div className="md:w-1/2 md:ml-4">
+            <div className="md:w-1/2 md:ml-4">  
                 <div className="relative pb-full sm:pb-3/4 md:pb-0 md:h-full rounded-lg overflow-hidden shadow-lg hover:shadow-2xl"> 
                     <Img 
                         src={imgSrc} 

@@ -13,14 +13,13 @@ const BlogListing = ({title, body, authorPic, authorName, publishedDate, firstBl
     return (
         <Aux>
             {separatingLine}
-            <H1 part1={title} />
+            <Link to="/blog/article">
+                <H1 part1={title} />
+            </Link>
             <Para text={body} styles="pt-6" />
             <Link to="/blog/article">
                 <p className="text-sec-100">Read More</p>
             </Link>
-            {/* <a href="/blog/article">
-                <p className="text-sec-100">Read More</p>
-            </a> */}
             <div className="flex items-center mt-4">
                 <img src={authorPic} alt="" className="w-6 h-6 rounded-full border-1 border-gray-100 mr-4 " />
                 <Para text={authorName} styles='text-sm mr-4' />

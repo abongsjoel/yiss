@@ -54,7 +54,8 @@ module.exports = {
     border: ['responsive', 'hover', 'focus', 'active'],
     borderWidth: ['responsive', 'hover', 'focus', 'active'],
     borderStyles: ['responsive', 'hover', 'focus', 'active'],
-    borderColor: ['responsive', 'hover', 'focus', 'active']
+    borderColor: ['responsive', 'hover', 'focus', 'active'],
+    transitionDuration: ['responsive', 'hover', 'focus', 'active']
   },
   plugins: []
 }

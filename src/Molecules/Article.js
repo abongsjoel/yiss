@@ -38,7 +38,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, comments}) 
                 <div className="w-3/5"> 
                     <p className="text-sm font-bold"> Thierry Joel <span className=" font-normal text-gray-400"> |  2 hours ago</span></p>
                     <Para  text={comments} styles="text-sm mt-2 text-gray-400" />
-                    <a><p className="text-sm text-gray-900">Reply</p></a>
+                    <a href="/"><p className="text-sm text-gray-900">Reply</p></a>
                 </div>
             </div>
         </Aux>   

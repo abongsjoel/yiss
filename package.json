@@ -17,6 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:styles": "postcss src/tailwind.css -o src/styles.css",
+    "watch:styles": "postcss src/tailwind.css -o src/styles.css --watch",
     "prebuild": "npm run build:styles",
     "prestart": "npm run build:styles",
     "docz:dev": "docz dev",
