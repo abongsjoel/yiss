@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 
 import H1 from '../Atoms/H1';
 import Para from '../Atoms/Para';
@@ -8,6 +8,9 @@ import likeIcon from '../assets/icons/like.svg';
 import Aux from '../hoc/Auxilary';
 
 const Article = ({title, body, authorPic, authorName, publishedDate, comments}) => {
+
+    const [likes, setLikes] = useState(20);
+
     return (
         <Aux>
             <H1 part1={title} />
@@ -26,13 +29,15 @@ const Article = ({title, body, authorPic, authorName, publishedDate, comments}) 
             {/* Comment Section */}
             <div className="mt-8 flex items-center">
                 <p className="text-gray-700 text-base font-bold pr-4">3 comments</p>
-                <img src={likeIcon} alt="" className="w-4 h-4" />
-                <p className="text-gray-700 text-sm px-1 font-bold">Likes</p>
-                <p className="bg-gray-300 text-xs p-1">20</p>
+                <div className="flex items-center cursor-pointer" onClick={() => setLikes(preLikes => preLikes + 1)}> 
+                    <img src={likeIcon} alt="" className="w-4 h-4" />
+                    <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
+                </div>
+                <p className="bg-gray-300 text-xs p-1">{likes}</p>
             </div>
             <hr className="mt-1 mb-4" />
             <div className="flex items-start">
-                <div className="h-12 w-12 bg-gray-300 mr-2">
+                <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
 
                 </div>
                 <div className="w-3/5"> 
