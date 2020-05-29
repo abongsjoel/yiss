@@ -14,7 +14,7 @@ const BlogArticle = () => (
         <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
         
         <div className="tj-container">
-            <Artilce 
+            <Artilce  
                     title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                     body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, 
                     tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
