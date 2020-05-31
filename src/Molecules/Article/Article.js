@@ -3,6 +3,7 @@ import React from 'react';
 import H1 from '../../Atoms/H1';
 import Para from '../../Atoms/Para';
 import Comment from './Comment';
+import AddComment from './AddComment';
 
 import Aux from '../../hoc/Auxilary';
 
@@ -24,6 +25,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, comments}) 
             </div>
 
             <Comment comments={comments} />
+            <AddComment />
 
         </Aux>   
     )
