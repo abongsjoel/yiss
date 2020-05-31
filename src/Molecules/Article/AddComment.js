@@ -12,7 +12,7 @@ const AddComment = () => (
                 rows="4" 
                 placeholder="Comments" 
                 // defaultValue="Comments" 
-                className="bg-gray-300 w-4/5 rounded-lg text-sm p-2 text-gray-600"
+                className="bg-gray-300 w-4/5 rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline"
             ></textarea>
         </div>
         <Button text="Post Comment" btnColor="bg-main-500" link='' />
