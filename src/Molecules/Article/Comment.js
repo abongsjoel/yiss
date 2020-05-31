@@ -9,6 +9,21 @@ const Comment = ({comments}) => {
 
     const [likes, setLikes] = useState(20);
 
+    const articleComments = comments.map(comment => {
+        return (
+            <div className="flex items-start my-5" key={comment.id}>
+                <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
+
+                </div>
+                <div className="w-3/5"> 
+                    <p className="text-sm font-bold"> {comment.name}  <span className=" font-normal text-gray-400">({comment.email}) |  2 hours ago</span></p>
+                    <Para  text={comment.body} styles="text-sm mt-2 text-gray-400" />
+                    {/* <a href="/"><p className="text-sm text-gray-900">Reply</p></a> */}
+                </div>
+            </div>
+        );
+    })
+
     return (
         <Aux>
             <div className="mt-8 flex items-center">
@@ -20,16 +35,7 @@ const Comment = ({comments}) => {
                 <p className="bg-gray-300 text-xs p-1">{likes}</p>
             </div>
             <hr className="mt-1 mb-4" />
-            <div className="flex items-start">
-                <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
-
-                </div>
-                <div className="w-3/5"> 
-                    <p className="text-sm font-bold"> Thierry Joel <span className=" font-normal text-gray-400"> |  2 hours ago</span></p>
-                    <Para  text="comment body" styles="text-sm mt-2 text-gray-400" />
-                    <a href="/"><p className="text-sm text-gray-900">Reply</p></a>
-                </div>
-            </div>
+            {articleComments}
         </Aux>
     );
 }
