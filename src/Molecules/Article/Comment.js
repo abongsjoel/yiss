@@ -12,7 +12,7 @@ const Comment = ({comments}) => {
     return (
         <Aux>
             <div className="mt-8 flex items-center">
-                <p className="text-gray-700 text-base font-bold pr-4">3 comments</p>
+                <p className="text-gray-700 text-base font-bold pr-4">{comments.length} comments</p>
                 <div className="flex items-center cursor-pointer" onClick={() => setLikes(preLikes => preLikes + 1)}> 
                     <img src={likeIcon} alt="" className="w-4 h-4" />
                     <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
@@ -26,7 +26,7 @@ const Comment = ({comments}) => {
                 </div>
                 <div className="w-3/5"> 
                     <p className="text-sm font-bold"> Thierry Joel <span className=" font-normal text-gray-400"> |  2 hours ago</span></p>
-                    <Para  text={comments} styles="text-sm mt-2 text-gray-400" />
+                    <Para  text="comment body" styles="text-sm mt-2 text-gray-400" />
                     <a href="/"><p className="text-sm text-gray-900">Reply</p></a>
                 </div>
             </div>

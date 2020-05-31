@@ -7,7 +7,7 @@ import AddComment from './AddComment';
 
 import Aux from '../../hoc/Auxilary';
 
-const Article = ({title, body, authorPic, authorName, publishedDate, comments}) => {
+const Article = ({title, body, authorPic, authorName, publishedDate, id, comments }) => {
 
     return (
         <Aux>
@@ -24,7 +24,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, comments}) 
                 </div>
             </div>
 
-            <Comment comments={comments} />
+            <Comment  comments={comments} />
             <AddComment />
 
         </Aux>   

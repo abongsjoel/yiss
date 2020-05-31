@@ -18,22 +18,25 @@ const BlogArticle = (props) => {
     const id = props.match.params.id;
 
     const [blogPost, err] = useHttp('/posts/' + id, []);
+    const [comments, commentsErr] = useHttp('/post/' + id + '/comments', []);
+
+    console.log("Comments: " , comments)
 
     let article = <p>Loading...</p>
-    if(err) {
+    if(err || commentsErr) {
         article = <p>Something went wrong</p>
     } else if (blogPost.length !== 0 ) {
         article = (
             <Artilce  
+                id={id}
                 title={blogPost.title}
                 body={blogPost.body + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. "}
                 authorPic={drSmikes}
                 authorName="Dr. Acho Fon"
                 publishedDate="03 March 2020"
                 firstBlog
-                comments=" Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor"
-        />  
+                comments={comments}
+            />  
         );
     }
 
