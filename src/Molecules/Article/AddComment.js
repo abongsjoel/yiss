@@ -11,6 +11,10 @@ const AddComment = () => {
     const [email, setEmail] = useState('');
     const [comment, setComment] = useState('');
 
+    const btnClickedHanler = () => {
+        console.log("You clicked the fucking button")
+    }
+
     return (
         <div className="mt-10"> 
             <H2 text="Leave a Reply" />
@@ -37,7 +41,7 @@ const AddComment = () => {
                     onChange={(event) => setComment(event.target.value)}
                 ></textarea>
             </div>
-            <Button text="Post Comment" btnColor="bg-main-500" type="submit" />
+            <Button text="Post Comment" btnColor="bg-main-500" type="submit" btnClicked={btnClickedHanler} />
         </div>
     );
 }

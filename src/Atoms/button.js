@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Button = ({text, btnColor, link, type}) => {
+const Button = ({text, btnColor, link, type, btnClicked}) => {
 
     let changingStyle = "hover:bg-blue-700 text-blue-700 border-blue-700 hover:text-white";
     if (btnColor === "white") {
@@ -12,7 +12,7 @@ const Button = ({text, btnColor, link, type}) => {
     let btn = null;
 
     if (type === "submit") {
-        btn = <button className={fixedStyle + " " + changingStyle}>{text}</button>
+        btn = <button className={fixedStyle + " " + changingStyle} onClick={btnClicked}>{text}</button>
     } else {
         btn = <NavLink to={link} type="button" className={fixedStyle + " " + changingStyle}>{text}</NavLink>
     }
