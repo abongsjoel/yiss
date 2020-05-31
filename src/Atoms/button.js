@@ -7,19 +7,16 @@ const Button = ({text, btnColor, link, type}) => {
     if (btnColor === "white") {
         changingStyle = "hover:bg-white text-white  border-white hover:text-blue-700";
     }
-    const fixedStyle = "bg-transparent font-semibold inline-block py-1 px-8 border hover:border-transparent rounded text-sm";
+    const fixedStyle = "bg-transparent font-semibold inline-block py-1 px-8 border hover:border-transparent rounded text-sm focus:outline-none";
     
     let btn = null;
 
     if (type === "submit") {
-        btn = <button>I am a submit button</button>
+        btn = <button className={fixedStyle + " " + changingStyle}>{text}</button>
     } else {
         btn = <NavLink to={link} type="button" className={fixedStyle + " " + changingStyle}>{text}</NavLink>
     }
-    return (
-        {btn}
-        // <button type="button" className={fixedStyle + " " + changingStyle}>{text}</button>
-    );
+    return btn;
 }
 
 export default Button;
