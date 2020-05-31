@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from '../../axios';
 
-export const useHttp = (url, dependencies) => {
+export const useHttp = (url,dependencies) => {
+    // console.log("this is the dependency", dependencies);
     const [ blogPosts, setBlogPosts ] = useState([]);
     const [ err, setErr] = useState(false);
 
@@ -34,7 +35,7 @@ export const useHttp = (url, dependencies) => {
             .catch(err => {
                 setErr(true);
             });
-    }, dependencies)
+    }, [url])
 
     return [blogPosts, err]
 }

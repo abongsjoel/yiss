@@ -12,7 +12,7 @@ import Aux from '../hoc/Auxilary';
 
 const Blog = () => {
 
-     const [blogPosts, err] = useHttp('/posts', []);
+     const [blogPosts, err] = useHttp('/posts', ['/posts']);
 
      let blogListing = <p>Loading...</p>
 
