@@ -6,8 +6,12 @@ import './styles.css'; //For tailwindcss
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import axios from 'axios';
+
 import './fonts/neo-latina-demo-FFP.ttf';
 import './fonts/georgia.ttf';
+
+axios.defaults.baseURL = 'http://jsonplaceholder.typicode.com';
 
 const app = (
     <BrowserRouter>
