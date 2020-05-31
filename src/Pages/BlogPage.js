@@ -55,10 +55,11 @@ const Blog = () => {
           const blogs = blogPosts.slice(0,5);
           blogListing = blogs.map(blogPost => {
                return (
-                    <BlogListing 
+                    <BlogListing   
                          key={blogPost.id}
                          title={blogPost.title}
                          body= {blogPost.body}
+                         id={blogPost.id}
                          authorPic={drSmikes}
                          authorName="Dr. Acho Fon"
                          publishedDate="03 March 2020"

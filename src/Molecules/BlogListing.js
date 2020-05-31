@@ -6,18 +6,18 @@ import Para from '../Atoms/Para';
 
 import Aux from '../hoc/Auxilary';
 
-const BlogListing = ({title, body, authorPic, authorName, publishedDate, firstBlog}) => {
+const BlogListing = ({title, body, id,  authorPic, authorName, publishedDate, firstBlog}) => {
     
     const separatingLine = firstBlog ? null : <hr className="my-10" />
 
     return (
         <Aux>
             {separatingLine}
-            <Link to="/blog/article">
+            <Link to={"/blog/article/" + id}>
                 <H1 part1={title} />
             </Link>
             <Para text={body} styles="pt-6" />
-            <Link to="/blog/article">
+            <Link to={"/blog/article/" + id}>
                 <p className="text-sec-100">Read More</p>
             </Link>
             <div className="flex items-center mt-4">
