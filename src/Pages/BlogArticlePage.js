@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PageHeader from '../Organisms/pageHeader';
-import Artilce from '../Molecules/Article';
+import Artilce from '../Molecules/Article/Article';
 
 import drSmikes from '../assets/images/doc.jpg';
 
@@ -31,94 +31,14 @@ const BlogArticle = () => (
                     Aenean eu ante finibus, 
                     tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
                     Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor
-                    Aenean eu ante finibus, 
-                    tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                    Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                    Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor"
+                    Integer rhoncus quam vitae euismod pharetra. "
                     authorPic={drSmikes}
                     authorName="Dr. Acho Fon"
                     publishedDate="03 March 2020"
                     firstBlog
                     comments=" Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
                     Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor"
-            /> 
+            />     
         </div>
 
     </Aux>   

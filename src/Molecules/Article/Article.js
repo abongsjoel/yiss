@@ -1,11 +1,11 @@
 import React, { useState} from 'react';
 
-import H1 from '../Atoms/H1';
-import Para from '../Atoms/Para';
+import H1 from '../../Atoms/H1';
+import Para from '../../Atoms/Para';
 
-import likeIcon from '../assets/icons/like.svg';
+import likeIcon from '../../assets/icons/like.svg';
 
-import Aux from '../hoc/Auxilary';
+import Aux from '../../hoc/Auxilary';
 
 const Article = ({title, body, authorPic, authorName, publishedDate, comments}) => {
 
@@ -46,6 +46,8 @@ const Article = ({title, body, authorPic, authorName, publishedDate, comments}) 
                     <a href="/"><p className="text-sm text-gray-900">Reply</p></a>
                 </div>
             </div>
+
+            {/* Add a comment */}
         </Aux>   
     )
 }
