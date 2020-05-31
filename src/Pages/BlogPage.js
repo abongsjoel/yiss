@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 
-import axios from 'axios';
+import axios from '../axios';
 
 import PageHeader from '../Organisms/pageHeader';
 import BlogListing from '../Molecules/BlogListing';
@@ -40,7 +40,7 @@ const Blog = () => {
 
 
           /* Using the axios library */
-          axios.get('https://jsonplaceholder.typicode.com/posts')
+          axios.get('/posts')
                .then(response => {
                     setBlogPosts(response.data);
                })
