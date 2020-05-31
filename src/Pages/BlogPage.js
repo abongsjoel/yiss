@@ -16,8 +16,6 @@ const Blog = () => {
      const [ blogPosts, setBlogPosts ] = useState([]);
      const [ err, setErr] = useState(false);
 
-     console.log("Blog is rendered")
-
      useEffect(() => {
 
           /* Using the Fetch API */
@@ -53,9 +51,7 @@ const Blog = () => {
 
      if(err) {
           blogListing = <p> Something went wrong </p>
-     }
-     console.log("The length of the array is : ", blogPosts.length)
-     if(blogPosts.length !== 0) {
+     } else if(blogPosts.length !== 0) {
           const blogs = blogPosts.slice(0,5);
           blogListing = blogs.map(blogPost => {
                return (
@@ -78,19 +74,7 @@ const Blog = () => {
                <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
                
                <div className="tj-container">  
-                    {blogListing}
-                    {/* <BlogListing 
-                         title="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, 
-                         tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. 
-                         Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. 
-                         Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolor"
-                         authorPic={drSmikes}
-                         authorName="Dr. Acho Fon"
-                         publishedDate="03 March 2020"
-                         firstBlog
-                    /> */}
-                   
+                    {blogListing}      
                </div>
           </Aux>   
      );
