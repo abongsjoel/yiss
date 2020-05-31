@@ -20,8 +20,6 @@ const BlogArticle = (props) => {
     const [blogPost, err] = useHttp('/posts/' + id, []);
     const [comments, commentsErr] = useHttp('/post/' + id + '/comments', []);
 
-    console.log("Comments: " , comments)
-
     let article = <p>Loading...</p>
     if(err || commentsErr) {
         article = <p>Something went wrong</p>
