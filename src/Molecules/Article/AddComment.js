@@ -5,7 +5,7 @@ import Button from '../../Atoms/Button';
 import H2 from '../../Atoms/H2';
 import axios from 'axios';
 
-const AddComment = () => {
+const AddComment = ({articleId}) => {
     const inputStyle = "bg-gray-300 w-4/5 rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline my-2"
 
     const [fullName, setFullName] = useState('');
@@ -16,9 +16,10 @@ const AddComment = () => {
         const newComment = {
             name: fullName,
             email,
-            comment
+            comment,
+            articleId
         }
-        axios.post('/posts/comments', newComment)
+        axios.post('/posts', newComment)
             .then (response => {
                 console.log(response.data);
             }).catch ( error => {

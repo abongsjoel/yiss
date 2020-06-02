@@ -25,7 +25,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, id, comment
             </div>
 
             <Comment  comments={comments} />
-            <AddComment />
+            <AddComment articleId={id} />
 
         </Aux>   
     )
