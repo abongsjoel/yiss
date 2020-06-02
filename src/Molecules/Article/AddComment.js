@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // import Para from '../../Atoms/Para';
 import Button from '../../Atoms/Button';
 import H2 from '../../Atoms/H2';
+import axios from 'axios';
 
 const AddComment = () => {
     const inputStyle = "bg-gray-300 w-4/5 rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline my-2"
@@ -12,7 +13,17 @@ const AddComment = () => {
     const [comment, setComment] = useState('');
 
     const btnClickedHanler = () => {
-        console.log("You clicked the fucking button")
+        const newComment = {
+            name: fullName,
+            email,
+            comment
+        }
+        axios.post('/posts/comments', newComment)
+            .then (response => {
+                console.log(response.data);
+            }).catch ( error => {
+                console.log("Error: your comment could not be delivere");
+            })
     }
 
     return (
