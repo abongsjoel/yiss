@@ -23,7 +23,7 @@ const AddComment = ({articleId}) => {
             .then (response => {
                 console.log(response.data);
             }).catch ( error => {
-                console.log("Error: your comment could not be delivere");
+                console.log("Error: your comment could not be delivered");
             })
     }
 
