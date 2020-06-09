@@ -15,7 +15,6 @@ function App() {
       <Switch>
         <Route path="/about-us" component={AboutUsPage} />
         <Route path="/our-communities" component={OurCommunitiesPage} />
-        {/* <Route path="/blog/article"  /> */}
         <Route path="/blog/article/:id" component={BlogArticle} />
         <Route path="/blog" component={BlogPage} />
         <Route path="/contact-us" component={ContactUsPage} />

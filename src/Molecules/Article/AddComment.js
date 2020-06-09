@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-// import Para from '../../Atoms/Para';
 import Button from '../../Atoms/Button';
 import H2 from '../../Atoms/H2';
+
 import axios from 'axios';
 
 const AddComment = ({articleId}) => {
