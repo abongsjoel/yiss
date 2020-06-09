@@ -21,6 +21,7 @@ const AddComment = ({articleId}) => {
         }
         axios.post('/posts', newComment)
             .then (response => {
+                console.log("Wow, your comment was successfully delivered to the server");
                 console.log(response.data);
             }).catch ( error => {
                 console.log("Error: your comment could not be delivered");
