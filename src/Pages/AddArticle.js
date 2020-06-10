@@ -5,6 +5,7 @@ import HeaderImage from '../assets/images/blog-header.JPG';
 import H1 from '../Atoms/H1';
 import H2 from '../Atoms/H2';
 import Input from '../Atoms/Input';
+import Button from '../Atoms/Button';
 
 import Aux from '../hoc/Auxilary';
 
@@ -12,6 +13,14 @@ const AddArticle = () => {
 
     const [name, setName] = useState("Dr Smikes");
     const [email, setEmail] = useState("abongsmike@gmail.com");
+
+    const btnClickedHanler = () => {
+        const article = {
+            author: name,
+            email,
+        }
+        console.log(article)
+    }
 
     return (
         <Aux>
@@ -43,6 +52,12 @@ const AddArticle = () => {
                         />
                     </div>
                 </div>
+                <Button 
+                    text="Post Article" 
+                    btnColor="bg-main-500" 
+                    type="submit" 
+                    btnClicked={btnClickedHanler} 
+                />
             </div>
         </Aux>  
     );
