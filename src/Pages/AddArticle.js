@@ -6,7 +6,7 @@ import HeaderImage from '../assets/images/blog-header.JPG';
 import Aux from '../hoc/Auxilary';
 import H1 from '../Atoms/H1';
 import H2 from '../Atoms/H2';
-import InputText from '../Atoms/InputText';
+import InputText from '../Atoms/Input/InputText';
 
 const AddArticle = () => {
     return (
@@ -31,7 +31,7 @@ const AddArticle = () => {
                             type = "text"
                             placeholder = "Enter your email address"
                             label = "Email"
-                            hint = "Your email address will not be shown"
+                            hint = "Your email address will not be published"
                         />
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Aux from '../hoc/Auxilary';
+import Aux from '../../hoc/Auxilary';
 
 const InputText = ({type, placeholder, label, required, hint, instruction, initialValue, textChanged}) => {
     const inputStyle = "bg-gray-300 w-full rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline my-2"
@@ -19,7 +19,6 @@ const InputText = ({type, placeholder, label, required, hint, instruction, initi
                 className={inputStyle}
                 value={initialValue}
                 onChange={(event) => textChanged(event)}
-                hint = "Your email address will not be shown"
             />
             <p className="text-xs text-gray-500 font-light -mt-2">{instruction}</p>
         </Aux>
