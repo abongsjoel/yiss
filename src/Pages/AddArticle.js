@@ -6,7 +6,7 @@ import HeaderImage from '../assets/images/blog-header.JPG';
 import Aux from '../hoc/Auxilary';
 import H1 from '../Atoms/H1';
 import H2 from '../Atoms/H2';
-import InputText from '../Atoms/Input/InputText';
+import Input from '../Atoms/Input';
 
 const AddArticle = () => {
     return (
@@ -19,7 +19,7 @@ const AddArticle = () => {
                 <H2 text="Personal Information" />
                 <div className="my-5 w-full flex">
                     <div className="w-1/2 mr-2">
-                        <InputText 
+                        <Input 
                             type = "text"
                             placeholder = "Enter your name"
                             label = "Name"
@@ -27,7 +27,7 @@ const AddArticle = () => {
                         />
                     </div>
                     <div className="w-1/2 ml-2">
-                        <InputText 
+                        <Input 
                             type = "text"
                             placeholder = "Enter your email address"
                             label = "Email"

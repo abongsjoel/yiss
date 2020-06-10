@@ -2,7 +2,7 @@ import React from 'react'
 
 import Aux from '../../hoc/Auxilary';
 
-const InputText = ({
+const Input = ({
     type, 
     placeholder, 
     label, 
@@ -51,4 +51,4 @@ const InputText = ({
     )
 }
 
-export default InputText
+export default Input;
