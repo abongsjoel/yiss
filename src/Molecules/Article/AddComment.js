@@ -4,6 +4,7 @@ import Button from '../../Atoms/Button';
 import H2 from '../../Atoms/H2';
 
 import axios from 'axios';
+import InputText from '../../Atoms/InputText';
 
 const AddComment = ({articleId}) => {
     const inputStyle = "bg-gray-300 w-4/5 rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline my-2"
@@ -19,33 +20,35 @@ const AddComment = ({articleId}) => {
             comment,
             articleId
         }
-        axios.post('/posts', newComment)
-            .then (response => {
-                console.log("Wow, your comment was successfully delivered to the server");
-                console.log(response.data);
-            }).catch ( error => {
-                console.log("Error: your comment could not be delivered");
-            })
+        console.log(newComment)
+        // axios.post('/posts', newComment)
+        //     .then (response => {
+        //         console.log("Wow, your comment was successfully delivered to the server");
+        //         console.log(response.data);
+        //     }).catch ( error => {
+        //         console.log("Error: your comment could not be delivered");
+        //     })
     }
 
     return (
         <div className="mt-10"> 
             <H2 text="Leave a Reply" />
             <p className="text-gray-500 text-xs">Your email address will not be published</p>
-            <div className="my-5">
-                <input 
+            <div className="my-5 w-4/5">
+                <InputText
                     type="text" 
                     placeholder="Your full name"
-                    className={inputStyle}
-                    value={fullName}
-                    onChange={(event) => setFullName(event.target.value)}
+                    label="Name"
+                    required
+                    initialValue={fullName}
+                    textChanged={(event) => setFullName(event.target.value)}
                 />
-                <input 
-                    type="text" 
+                <InputText 
+                    type="email" 
                     placeholder="Your email address"
-                    className={inputStyle}
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
+                    label="Email"
+                    initialValue={email}
+                    textChanged={(event) => setEmail(event.target.value)}
                 />
                 <textarea 
                     rows="4" 

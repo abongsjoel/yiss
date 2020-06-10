@@ -11,7 +11,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, id, comment
 
     return (
         <Aux>
-            <H1 part1={title} />
+            {/* <H1 part1={title} />
             <Para text={publishedDate} styles='text-sm' />
 
             <Para text={body} styles="pt-6" />
@@ -24,7 +24,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, id, comment
                 </div>
             </div>
 
-            <Comment  comments={comments} />
+            <Comment  comments={comments} /> */}
             <AddComment articleId={id} />
 
         </Aux>   
