@@ -4,6 +4,9 @@ import PageHeader from '../Organisms/pageHeader';
 import HeaderImage from '../assets/images/blog-header.JPG';
 
 import Aux from '../hoc/Auxilary';
+import H1 from '../Atoms/H1';
+import H2 from '../Atoms/H2';
+import InputText from '../Atoms/InputText';
 
 const AddArticle = () => {
     return (
@@ -11,7 +14,49 @@ const AddArticle = () => {
             <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
             
             <div className="tj-container">
-                <h1>We add articles here</h1>
+                <H1 part1="Post A New " part2="Article" />
+                <hr className="my-5" />
+                <H2 text="Personal Information" />
+                <div className="my-5 w-full flex">
+                    <div className="w-1/2 mr-2">
+                        <InputText 
+                            type = "text"
+                            placeholder = "Enter your name"
+                            label = "Name"
+                            required
+                        />
+                    </div>
+                    <div className="w-1/2 ml-2">
+                        <InputText 
+                            type = "text"
+                            placeholder = "Enter your email address"
+                            label = "Email"
+                            instruction = "Your email address will not be shown"
+                        />
+                    </div>
+                    
+                    {/* <input 
+                        type="text" 
+                        placeholder="Your full name"
+                        className={inputStyle}
+                        value={fullName}
+                        onChange={(event) => setFullName(event.target.value)}
+                    />
+                    <input 
+                        type="text" 
+                        placeholder="Your email address"
+                        className={inputStyle}
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                    />
+                    <textarea 
+                        rows="4" 
+                        placeholder="Comments" 
+                        className={inputStyle}
+                        value={comment}
+                        onChange={(event) => setComment(event.target.value)}
+                    ></textarea> */}
+                </div>
             </div>
         </Aux>  
     );

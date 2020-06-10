@@ -31,6 +31,7 @@ const AddComment = ({articleId}) => {
     return (
         <div className="mt-10"> 
             <H2 text="Leave a Reply" />
+            <p className="text-gray-500 text-xs">Your email address will not be published</p>
             <div className="my-5">
                 <input 
                     type="text" 
