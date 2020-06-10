@@ -21,19 +21,18 @@ const AddComment = ({articleId}) => {
             articleId
         }
         console.log(newComment)
-        // axios.post('/posts', newComment)
-        //     .then (response => {
-        //         console.log("Wow, your comment was successfully delivered to the server");
-        //         console.log(response.data);
-        //     }).catch ( error => {
-        //         console.log("Error: your comment could not be delivered");
-        //     })
+        axios.post('/posts', newComment)
+            .then (response => {
+                console.log("Wow, your comment was successfully delivered to the server");
+                console.log(response.data);
+            }).catch ( error => {
+                console.log("Error: your comment could not be delivered");
+            })
     }
 
     return (
         <div className="mt-10"> 
             <H2 text="Leave a Reply" />
-            {/* <p className="text-gray-500 text-xs">Your email address will not be published</p> */}
             <div className="my-5 w-4/5">
                 <div className="flex mb-5">
                     <div className="w-1/2 mr-2">

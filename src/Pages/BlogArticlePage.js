@@ -43,7 +43,7 @@ const BlogArticle = (props) => {
             <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
             
             <div className="tj-container">
-                {/* {article} */}
+                {article}
                 <Artilce  
                     comments={comments}
                 />  
