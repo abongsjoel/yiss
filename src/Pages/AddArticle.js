@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import PageHeader from '../Organisms/pageHeader';
 import HeaderImage from '../assets/images/blog-header.JPG';
-
-import Aux from '../hoc/Auxilary';
 import H1 from '../Atoms/H1';
 import H2 from '../Atoms/H2';
 import Input from '../Atoms/Input';
 
+import Aux from '../hoc/Auxilary';
+
 const AddArticle = () => {
+
+    const [name, setName] = useState("Dr Smikes");
+    const [email, setEmail] = useState("abongsmike@gmail.com");
+
     return (
         <Aux>
             <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
@@ -24,6 +28,8 @@ const AddArticle = () => {
                             placeholder = "Enter your name"
                             label = "Name"
                             required
+                            initialValue={name}
+                            textChanged={event => setName(event.target.value)}
                         />
                     </div>
                     <div className="w-1/2 ml-2">
@@ -32,6 +38,8 @@ const AddArticle = () => {
                             placeholder = "Enter your email address"
                             label = "Email"
                             hint = "Your email address will not be published"
+                            initialValue={email}
+                            textChanged={event => setEmail(event.target.value)}
                         />
                     </div>
                 </div>
