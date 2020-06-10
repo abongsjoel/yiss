@@ -31,31 +31,9 @@ const AddArticle = () => {
                             type = "text"
                             placeholder = "Enter your email address"
                             label = "Email"
-                            instruction = "Your email address will not be shown"
+                            hint = "Your email address will not be shown"
                         />
                     </div>
-                    
-                    {/* <input 
-                        type="text" 
-                        placeholder="Your full name"
-                        className={inputStyle}
-                        value={fullName}
-                        onChange={(event) => setFullName(event.target.value)}
-                    />
-                    <input 
-                        type="text" 
-                        placeholder="Your email address"
-                        className={inputStyle}
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
-                    />
-                    <textarea 
-                        rows="4" 
-                        placeholder="Comments" 
-                        className={inputStyle}
-                        value={comment}
-                        onChange={(event) => setComment(event.target.value)}
-                    ></textarea> */}
                 </div>
             </div>
         </Aux>  
