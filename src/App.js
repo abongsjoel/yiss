@@ -8,6 +8,7 @@ import OurCommunitiesPage from './Pages/OurCommunitiesPage';
 import BlogPage from './Pages/BlogPage';
 import BlogArticle from './Pages/BlogArticlePage';
 import ContactUsPage from './Pages/ContactUsPage';
+import AddArticle from './Pages/AddArticle';
 
 function App() {
   return (  
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about-us" component={AboutUsPage} />
         <Route path="/our-communities" component={OurCommunitiesPage} />
         <Route path="/blog/article/:id" component={BlogArticle} />
+        <Route path="/blog/addarticle" component={AddArticle} />
         <Route path="/blog" component={BlogPage} />
         <Route path="/contact-us" component={ContactUsPage} />
         <Route path="/" component={Homepage} />
