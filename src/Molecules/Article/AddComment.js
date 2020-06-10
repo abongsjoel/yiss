@@ -57,13 +57,14 @@ const AddComment = ({articleId}) => {
                         />
                     </div>
                 </div>
-                <textarea 
+                <InputText
+                    type="textarea" 
                     rows="4" 
                     placeholder="Comments" 
                     className={inputStyle}
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}
-                ></textarea>
+                ></InputText>
             </div>
             <Button text="Post Comment" btnColor="bg-main-500" type="submit" btnClicked={btnClickedHanler} />
         </div>
