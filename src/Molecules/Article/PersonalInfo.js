@@ -1,6 +1,5 @@
 import React from 'react'
 
-import H1 from '../../Atoms/H1';
 import H2 from '../../Atoms/H2';
 import Input from '../../Atoms/Input';
 
@@ -9,7 +8,6 @@ import Aux from '../../hoc/Auxilary';
 const PersonalInfo = ({name, nameChanged, email, emailChanged}) => {
     return (
         <Aux>
-            <H1 part1="Post A New " part2="Article" />
             <hr className="my-5" />
             <H2 text="Personal Information" />
             <div className="my-5 w-full flex">
