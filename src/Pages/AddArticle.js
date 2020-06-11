@@ -6,8 +6,7 @@ import Button from '../Atoms/Button';
 import H1 from '../Atoms/H1';
 import PersonalInfo from '../Molecules/Article/PersonalInfo';
 import ArticleInfo from '../Molecules/Article/ArticleInfor';
-
-
+import Modal from '../Atoms/Modal/Modal';
 
 // import axios from '../axios/jsonPlaceHolder';
 import axios from '../axios/firebase';
@@ -26,10 +25,11 @@ const AddArticle = () => {
     const [title, setTitle] = useState("");
     const [preview, setPreview] = useState("");
     const [body, setBody] = useState("");
-
     const [articles, setArticles] = useState(null);
 
     const [refresh, setRefresh] = useState(false);
+    const [show, setShow] = useState(false); //Show Modal when article is submitted successfully
+    const [submitting, setSubmitting] = useState(false);
 
     useEffect(() => {
             axios.get('/articles.json')
@@ -52,6 +52,7 @@ const AddArticle = () => {
     }, [articles, refresh])
 
     const btnClickedHanler = () => {
+        setSubmitting(true);
         const newArticle = [{
             articleId: Date.now(),
             author: name,
@@ -78,13 +79,23 @@ const AddArticle = () => {
                 console.log("Wow, your article was successfully delivered to the server");
                 console.log(response.data);
                 setRefresh(true);
+                setShow(true);
+                setSubmitting(false);
             }).catch ( error => {
+                setSubmitting(false);
                 console.log("Error: your article could not be delivered. Please try again later. ", error);
             })
     }
 
+    const modalClickdedHandler = () => {
+        setShow(false);
+    }
+
     return (
         <Aux>
+            <Modal show={show} modalClicked={modalClickdedHandler}>
+                <p>Your Article was submitted successfully</p>
+            </Modal>
             <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
             
             <div className="tj-container">
@@ -104,7 +115,7 @@ const AddArticle = () => {
                     bodyChanged={event => setBody(event.target.value)}
                 />
                 <Button 
-                    text="Post Article" 
+                    text={submitting ? "Submitting" : "Post Article"} 
                     btnColor="bg-main-500" 
                     type="submit" 
                     btnClicked={btnClickedHanler} 
