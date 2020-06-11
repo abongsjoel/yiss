@@ -44,9 +44,6 @@ const BlogArticle = (props) => {
             
             <div className="tj-container">
                 {article}
-                <Artilce  
-                    comments={comments}
-                />  
             </div>
         </Aux>   
     );

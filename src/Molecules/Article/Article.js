@@ -20,7 +20,7 @@ const Article = ({title, body, authorPic, authorName, publishedDate, id, comment
                 <img src={authorPic} alt="" className="w-20 h-20 rounded-full border border-gray-300 p-1 mr-4 " />
                 <div>
                     <Para text={authorName} styles='text-sm font-bold' />
-                    <p className='text-gray-700 text-sm' >Read <span className="text-sec-100"><a href='/blog'>more posts</a></span> by this author</p> 
+                    <p className='text-gray-700 text-sm' >Read <span className="text-sec-100"><a href='/blog'>more posts</a></span> </p> 
                 </div>
             </div>
 
