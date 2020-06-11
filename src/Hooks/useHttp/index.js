@@ -35,7 +35,7 @@ export const useHttp = (url, dependencies) => {
             .catch(err => {
                 setErr(true);
             });
-    }, [url]);
+    }, dependencies);
 
     return [blogPosts, err]
 }
