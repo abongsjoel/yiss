@@ -5,7 +5,7 @@ import likeIcon from '../../assets/icons/like.svg';
 
 import Aux from '../../hoc/Auxilary';
 
-const Comment = ({comments}) => {
+const Comment = ({comments, ArticleId}) => {
 
     const [likes, setLikes] = useState(20);
 

@@ -15,10 +15,10 @@ import HeaderImage from '../assets/images/blog-header.JPG';
 
 const BlogArticle = (props) => {
 
-    const id = props.match.params.id;
+    const ArticleId = props.match.params.id;
 
-    const [blogPost, err] = useHttp('/posts/' + id, []);
-    const [comments, commentsErr] = useHttp('/post/' + id + '/comments', []);
+    const [blogPost, err] = useHttp('/posts/' + ArticleId, []);
+    const [comments, commentsErr] = useHttp('/post/' + ArticleId + '/comments', []);
 
     let article = <p>Loading...</p>
     if(err || commentsErr) {
@@ -26,7 +26,7 @@ const BlogArticle = (props) => {
     } else if (blogPost.length !== 0 ) {
         article = (
             <Artilce  
-                id={id}
+                ArticleId={ArticleId}
                 title={blogPost.title}
                 body={blogPost.body + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. "}
                 authorPic={drSmikes}

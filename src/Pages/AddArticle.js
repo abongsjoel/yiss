@@ -5,9 +5,10 @@ import HeaderImage from '../assets/images/blog-header.JPG';
 import Button from '../Atoms/Button';
 import H1 from '../Atoms/H1';
 import PersonalInfo from '../Molecules/Article/PersonalInfo';
-
-import Aux from '../hoc/Auxilary';
 import ArticleInfo from '../Molecules/Article/ArticleInfor';
+
+import axios from 'axios';
+import Aux from '../hoc/Auxilary';
 
 const AddArticle = () => {
 
@@ -20,7 +21,7 @@ const AddArticle = () => {
     const [body, setBody] = useState("");
 
     const btnClickedHanler = () => {
-        const article = {
+        const newArticle = {
             id: Date.now(),
             author: name,
             email,
@@ -28,7 +29,15 @@ const AddArticle = () => {
             title,
             body
         }
-        console.log(article)
+        console.log(newArticle)
+
+        axios.post('/posts', newArticle)
+            .then (response => {
+                console.log("Wow, your article was successfully delivered to the server");
+                console.log(response.data);
+            }).catch ( error => {
+                console.log("Error: your article could not be delivered. Please try again later");
+            })
     }
 
     return (

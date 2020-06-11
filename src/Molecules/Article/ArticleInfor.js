@@ -1,6 +1,5 @@
 import React from 'react'
 
-import H1 from '../../Atoms/H1';
 import H2 from '../../Atoms/H2';
 import Input from '../../Atoms/Input';
 
