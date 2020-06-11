@@ -12,7 +12,9 @@ const Input = ({
     initialValue, 
     textChanged,
     rows,
-    cols
+    cols,
+    id,
+    name
 }) => {
     const inputStyle = "bg-gray-300 w-full rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline my-2"
 
@@ -35,6 +37,15 @@ const Input = ({
                 value={initialValue}
                 onChange={(event) => textChanged(event)}
             ></textarea>
+        );
+    } else if (type === "file") {
+        input = (
+            <input 
+                type={type}
+                id={id}
+                name={name}
+                className={inputStyle}
+            />
         );
     }
     return (

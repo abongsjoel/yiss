@@ -32,6 +32,29 @@ const PersonalInfo = ({name, nameChanged, email, emailChanged}) => {
                     />
                 </div>
             </div>
+            <div className="my-5 w-full flex">
+                <div className="w-1/2 mr-2">
+                    <Input 
+                        type="file" 
+                        // placeholder="Upload a thumbnail pic"
+                        label="Thumbnail Image"
+                        id="myfile"
+                        name="myfile"
+                        // initialValue={name}
+                        // textChanged={nameChanged}
+                    />
+                </div>
+                {/* <div className="w-1/2 ml-2">
+                    <Input 
+                        type="text"
+                        placeholder="Enter your email address"
+                        label="Email"
+                        hint="Your email address will not be published"
+                        initialValue={email}
+                        textChanged={emailChanged}
+                    />
+                </div> */}
+            </div>
         </Aux>
     )
 }
