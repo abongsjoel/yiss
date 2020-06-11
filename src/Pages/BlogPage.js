@@ -21,17 +21,17 @@ const Blog = () => {
      if(err) {
           blogListing = <p> Sorry, could not load blog posts. Try again later </p>
      } else if(blogPosts.length !== 0) {
-          const blogs = blogPosts.slice(0,5);
+          const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {
                return (
                     <BlogListing   
-                         key={blogPost.id}
+                         key={blogPost.articleId}
                          title={blogPost.title}
-                         body= {blogPost.body}
-                         id={blogPost.id}
+                         body= {blogPost.preview}
+                         id={blogPost.articleId}
                          authorPic={drSmikes}
-                         authorName="Dr. Acho Fon"
-                         publishedDate="03 March 2020"
+                         authorName={blogPost.author}
+                         publishedDate={blogPost.date}
                          firstBlog={false}
                     />
                );

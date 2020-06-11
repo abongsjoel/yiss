@@ -53,11 +53,13 @@ const AddArticle = () => {
 
     const btnClickedHanler = () => {
         setSubmitting(true);
+        const d = new Date();
+        
         const newArticle = [{
             articleId: Date.now(),
             author: name,
             email,
-            date: Date.now(),
+            date: d.toDateString(),
             title,
             preview,
             body

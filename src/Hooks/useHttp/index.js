@@ -30,7 +30,6 @@ export const useHttp = (url, dependencies) => {
 
 
         /* Using the axios library */
-
         axios.get(url)
             .then(response => {
                 setBlogPosts(response.data);
