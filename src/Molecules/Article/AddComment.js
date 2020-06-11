@@ -7,7 +7,6 @@ import axios from 'axios';
 import Input from '../../Atoms/Input';
 
 const AddComment = ({articleId}) => {
-    const inputStyle = "bg-gray-300 w-4/5 rounded-lg text-sm p-2 text-gray-600 outline-none focus:shadow-outline my-2"
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -62,8 +61,7 @@ const AddComment = ({articleId}) => {
                     placeholder="Type your comments here" 
                     label="Comment"
                     required
-                    className={inputStyle}
-                    value={comment}
+                    initialValue={comment}
                     textChanged={(event) => setComment(event.target.value)}
                 />
             </div>

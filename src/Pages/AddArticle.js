@@ -11,14 +11,22 @@ import ArticleInfo from '../Molecules/Article/ArticleInfor';
 
 const AddArticle = () => {
 
+    /*Personal Info*/
     const [name, setName] = useState("Dr Smikes");
     const [email, setEmail] = useState("abongsmike@gmail.com");
 
+    /*Article Info*/
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
+
     const btnClickedHanler = () => {
         const article = {
+            id: Date.now(),
             author: name,
             email,
-            date: Date.now()
+            date: Date.now(),
+            title,
+            body
         }
         console.log(article)
     }
@@ -35,7 +43,12 @@ const AddArticle = () => {
                     email={email}
                     emailChanged={event => setEmail(event.target.value)}
                 />
-                <ArticleInfo />
+                <ArticleInfo 
+                    title={title}
+                    titleChanged={event => setTitle(event.target.value)}
+                    body={body}
+                    bodyChanged={event => setBody(event.target.value)}
+                />
                 <Button 
                     text="Post Article" 
                     btnColor="bg-main-500" 

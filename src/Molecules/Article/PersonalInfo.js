@@ -13,9 +13,9 @@ const PersonalInfo = ({name, nameChanged, email, emailChanged}) => {
             <div className="my-5 w-full flex">
                 <div className="w-1/2 mr-2">
                     <Input 
-                        type = "text"
-                        placeholder = "Enter your name"
-                        label = "Name"
+                        type="text"
+                        placeholder="Enter your name"
+                        label="Name"
                         required
                         initialValue={name}
                         textChanged={nameChanged}
@@ -23,10 +23,10 @@ const PersonalInfo = ({name, nameChanged, email, emailChanged}) => {
                 </div>
                 <div className="w-1/2 ml-2">
                     <Input 
-                        type = "text"
-                        placeholder = "Enter your email address"
-                        label = "Email"
-                        hint = "Your email address will not be published"
+                        type="text"
+                        placeholder="Enter your email address"
+                        label="Email"
+                        hint="Your email address will not be published"
                         initialValue={email}
                         textChanged={emailChanged}
                     />

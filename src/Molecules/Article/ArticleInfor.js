@@ -6,32 +6,31 @@ import Input from '../../Atoms/Input';
 
 import Aux from '../../hoc/Auxilary';
 
-const ArticleInfo = ({}) => {
+const ArticleInfo = ({title, titleChanged, body, bodyChanged}) => {
     return (
         <Aux>
             <hr className="my-5" />
             <H2 text="Article Information" />
-            <div className="my-5 w-full flex">
-                {/* <div className="w-1/2 mr-2">
-                    <Input 
-                        type = "text"
-                        placeholder = "Enter your name"
-                        label = "Name"
-                        required
-                        initialValue={name}
-                        textChanged={nameChanged}
-                    />
-                </div>
-                <div className="w-1/2 ml-2">
-                    <Input 
-                        type = "text"
-                        placeholder = "Enter your email address"
-                        label = "Email"
-                        hint = "Your email address will not be published"
-                        initialValue={email}
-                        textChanged={emailChanged}
-                    />
-                </div> */}
+            
+            <div className="my-5 w-full">
+                <Input 
+                    type="text"
+                    placeholder="Type or paste the title of your article"
+                    label="Title"
+                    required
+                    initialValue={title}
+                    textChanged={titleChanged}
+                />
+                <br />
+                <Input
+                    type="textarea"
+                    placeholder="Type or paste the body of your article here"
+                    label="Body"
+                    required
+                    rows="10"
+                    initialValue={body}
+                    textChanged={bodyChanged}
+                />
             </div>
         </Aux>
     )
