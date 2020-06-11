@@ -7,6 +7,8 @@ import Para from '../Atoms/Para';
 import Aux from '../hoc/Auxilary';
 
 const BlogListing = ({title, body, id,  authorPic, authorName, publishedDate, firstBlog}) => {
+
+    console.log("the id received in bloglisting from blogPage is: ", id);
     
     const separatingLine = firstBlog ? null : <hr className="my-10" />
 

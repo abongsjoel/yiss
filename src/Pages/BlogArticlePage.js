@@ -6,6 +6,7 @@ import { useHttp } from '../Hooks/useHttp';
 
 import PageHeader from '../Organisms/pageHeader';
 import Artilce from '../Molecules/Article/Article';
+import Spinner from '../Atoms/Spinner/Spinner';
 
 import drSmikes from '../assets/images/doc.jpg';
 
@@ -17,26 +18,58 @@ const BlogArticle = (props) => {
 
     const ArticleId = props.match.params.id;
 
-    const [blogPost, err] = useHttp('/posts/' + ArticleId, []);
-    const [comments, commentsErr] = useHttp('/post/' + ArticleId + '/comments', []);
+    const [blogPosts, err] = useHttp('/articles.json', []);
 
-    let article = <p>Loading...</p>
-    if(err || commentsErr) {
+    console.log("Content of blogPosts", blogPosts);
+
+    // const [comments, commentsErr] = useHttp('/post/' + ArticleId + '/comments', []);
+
+    let article = <Spinner />
+
+    if(err) {
         article = <p>Something went wrong</p>
-    } else if (blogPost.length !== 0 ) {
-        article = (
-            <Artilce  
-                ArticleId={ArticleId}
-                title={blogPost.title}
-                body={blogPost.body + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. "}
-                authorPic={drSmikes}
-                authorName="Dr. Acho Fon"
-                publishedDate="03 March 2020"
-                firstBlog
-                comments={comments}
-            />  
-        );
+    } else if (blogPosts.length !== 0 ) {
+        article = blogPosts.map(blogPost => {
+            if(blogPost.articleId == ArticleId){
+                article = (
+                    <Artilce  
+                        ArticleId={ArticleId}
+                        title={blogPost.title}
+                        body={blogPost.body + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. "}
+                        authorPic={drSmikes}
+                        authorName="Dr. Acho Fon"
+                        publishedDate="03 March 2020"
+                        firstBlog
+                        // comments={comments}
+                    />  
+                );
+                return article;
+            } 
+        });
     }
+
+
+
+
+
+
+
+    // if(err || commentsErr) {
+    //     article = <p>Something went wrong</p>
+    // } else if (blogPost.length !== 0 ) {
+    //     article = (
+    //         <Artilce  
+    //             ArticleId={ArticleId}
+    //             title={blogPost.title}
+    //             body={blogPost.body + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. "}
+    //             authorPic={drSmikes}
+    //             authorName="Dr. Acho Fon"
+    //             publishedDate="03 March 2020"
+    //             firstBlog
+    //             comments={comments}
+    //         />  
+    //     );
+    // }
 
     return (
         <Aux>

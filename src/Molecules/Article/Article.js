@@ -23,9 +23,9 @@ const Article = ({title, body, authorPic, authorName, publishedDate, ArticleId, 
                     <p className='text-gray-700 text-sm' >Read <span className="text-sec-100"><a href='/blog'>more posts</a></span> </p> 
                 </div>
             </div>
-
+{/* 
             <Comment  comments={comments} ArticleId={ArticleId} /> 
-            <AddComment articleId={ArticleId} />
+            <AddComment articleId={ArticleId} /> */}
 
         </Aux>   
     )

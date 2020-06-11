@@ -24,6 +24,7 @@ const Blog = () => {
      } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {
+               console.log("the id from sent to params is ", blogPost.articleId);
                return (
                     <BlogListing 
                          key={blogPost.articleId}
