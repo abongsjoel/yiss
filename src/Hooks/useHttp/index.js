@@ -33,7 +33,7 @@ export const useHttp = (url, dependencies) => {
 
         console.log("'this is the url: ", url)
 
-        axios.get(url)
+        axios.get("https://yiss-bbe69.firebaseio.com/articles.json")
             .then(response => {
                 console.log("we got here", response);
                 // setBlogPosts(response.data);
@@ -42,7 +42,7 @@ export const useHttp = (url, dependencies) => {
             .catch(err => {
                 setErr(true);
             });
-    }, dependencies);
+    }, [url]);
 
     return [blogPosts, err]
 }
