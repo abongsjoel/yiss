@@ -1,4 +1,4 @@
-import React, {useState, useEffect, memo} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import PageHeader from '../Organisms/pageHeader';
 import HeaderImage from '../assets/images/blog-header.JPG';

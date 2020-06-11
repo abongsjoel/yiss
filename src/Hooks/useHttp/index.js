@@ -31,18 +31,15 @@ export const useHttp = (url, dependencies) => {
 
         /* Using the axios library */
 
-        console.log("'this is the url: ", url)
-
-        axios.get("https://yiss-bbe69.firebaseio.com/articles.json")
+        axios.get(url)
             .then(response => {
-                console.log("we got here", response);
-                // setBlogPosts(response.data);
-                // console.log(blogPosts)
+                setBlogPosts(response.data);
+                console.log(blogPosts)
             })
             .catch(err => {
                 setErr(true);
             });
-    }, [url]);
+    }, dependencies);
 
     return [blogPosts, err]
 }

@@ -14,7 +14,7 @@ const Blog = () => {
 
      console.log("BlogPage runs")
 
-     const [blogPosts, err] = useHttp('/articles', []);
+     const [blogPosts, err] = useHttp('/articles.json', []);
 
      let blogListing = <p>Loading...</p>
 
