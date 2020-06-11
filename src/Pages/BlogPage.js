@@ -4,6 +4,7 @@ import { useHttp } from '../Hooks/useHttp';
 import PageHeader from '../Organisms/pageHeader';
 import BlogListing from '../Molecules/BlogListing';
 import HeaderImage from '../assets/images/blog-header.JPG';
+import Spinner from '../Atoms/Spinner/Spinner';
 
 import drSmikes from '../assets/images/doc.jpg';
 
@@ -16,11 +17,11 @@ const Blog = () => {
 
      const [blogPosts, err] = useHttp('/articles.json', []);
 
-     let blogListing = <p>Loading...</p>
+     let blogListing = <Spinner />;
 
      if(err) {
           blogListing = <p> Sorry, could not load blog posts. Try again later </p>
-     } else if(blogPosts.length !== 0) {
+     } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {
                return (
@@ -36,6 +37,8 @@ const Blog = () => {
                     />
                );
           })   
+     } else {
+          // blogListing = <p className="text-main-200 font-bold">Sorry, there are no blog articles at this point. Check back later</p>
      }
 
 
