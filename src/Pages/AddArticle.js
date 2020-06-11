@@ -7,7 +7,8 @@ import H1 from '../Atoms/H1';
 import PersonalInfo from '../Molecules/Article/PersonalInfo';
 import ArticleInfo from '../Molecules/Article/ArticleInfor';
 
-import axios from '../axios/jsonPlaceHolder';
+// import axios from '../axios/jsonPlaceHolder';
+import axios from '../axios/firebase';
 import Aux from '../hoc/Auxilary';
 
 const AddArticle = () => {
@@ -31,12 +32,12 @@ const AddArticle = () => {
         }
         console.log(newArticle)
 
-        axios.post('/posts', newArticle)
+        axios.post('/articles.json', newArticle)
             .then (response => {
                 console.log("Wow, your article was successfully delivered to the server");
-                console.log(response.data);
+                console.log(response);
             }).catch ( error => {
-                console.log("Error: your article could not be delivered. Please try again later");
+                console.log("Error: your article could not be delivered. Please try again later. ", error);
             })
     }
 
