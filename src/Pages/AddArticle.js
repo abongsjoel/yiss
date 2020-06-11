@@ -7,7 +7,7 @@ import H1 from '../Atoms/H1';
 import PersonalInfo from '../Molecules/Article/PersonalInfo';
 import ArticleInfo from '../Molecules/Article/ArticleInfor';
 
-import axios from 'axios';
+import axios from '../axios/jsonPlaceHolder';
 import Aux from '../hoc/Auxilary';
 
 const AddArticle = () => {
