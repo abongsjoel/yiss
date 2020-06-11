@@ -11,6 +11,7 @@ import ContactUsPage from './Pages/ContactUsPage';
 import AddArticle from './Pages/AddArticle';
 
 function App() {
+
   return (  
     <Layout>
       <Switch>

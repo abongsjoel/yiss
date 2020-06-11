@@ -8,23 +8,21 @@ const withErrorHandler = ( WrappedComponent, axios ) => {
 
         const [err, setErr] = useState(null);
 
-        axios.interceptors.request.use(req => {
+        /*Component Will Mount*/
+        const reqInterceptor = axios.interceptors.request.use(req => {
             setErr(null);
             return req;
         });
-        axios.interceptors.response.use(res => res, error => {
+        const resInterceptor = axios.interceptors.response.use(res => res, error => {
             setErr(error);
         });
 
-        // useEffect(() => {
-        //     axios.interceptors.request.use(req => {
-        //         setErr(null);
-        //         return req;
-        //     });
-        //     axios.interceptors.response.use(res => res, error => {
-        //         setErr(error);
-        //     });
-        // }, [])
+        useEffect(() => {
+           return () => {
+               axios.interceptors.request.eject(reqInterceptor);
+               axios.interceptors.responsea.eject(resInterceptor);
+           }
+        }, [])
 
         const errorConfirmedHandler = () => {
             setErr(null);
