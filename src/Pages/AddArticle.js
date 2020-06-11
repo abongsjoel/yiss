@@ -39,9 +39,9 @@ const AddArticle = () => {
                     if(articles === null || refresh){
                         setArticles(response.data);
                         setRefresh(false);
-                        setTitle("");
-                        setBody("");
-                        setPreview("");
+                        // setTitle("");
+                        // setBody("");
+                        // setPreview("");
                     }
                     // console.log("Value of articles after setState: ", articles)
                 })
@@ -94,7 +94,7 @@ const AddArticle = () => {
     return (
         <Aux>
             <Modal show={show} modalClicked={modalClickdedHandler}>
-                <p>Your Article was submitted successfully</p>
+                <p className="text-green-500 text-center font-bold" >Your Article was submitted successfully</p>
             </Modal>
             <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
             

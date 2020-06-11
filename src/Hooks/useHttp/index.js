@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from '../../axios/jsonPlaceHolder';
+
+// import axios from '../../axios/jsonPlaceHolder';
+import axios from '../../axios/firebase';
 
 export const useHttp = (url, dependencies) => {
     // console.log("this is the dependency", dependencies);
@@ -28,9 +30,13 @@ export const useHttp = (url, dependencies) => {
 
 
         /* Using the axios library */
+
+        console.log("'this is the url: ", url)
+
         axios.get(url)
             .then(response => {
-                setBlogPosts(response.data);
+                console.log("we got here", response);
+                // setBlogPosts(response.data);
                 // console.log(blogPosts)
             })
             .catch(err => {
