@@ -7,9 +7,12 @@ import H1 from '../Atoms/H1';
 import PersonalInfo from '../Molecules/Article/PersonalInfo';
 import ArticleInfo from '../Molecules/Article/ArticleInfor';
 
+
+
 // import axios from '../axios/jsonPlaceHolder';
 import axios from '../axios/firebase';
 import Aux from '../hoc/Auxilary';
+import withErrorHandler from '../hoc/withErrorHandler';
 
 const AddArticle = () => {
 
@@ -28,19 +31,17 @@ const AddArticle = () => {
     const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        
             axios.get('/articles.json')
                 .then(response => {
                     console.log("got it: ", response.data);
-                    console.log("Value of articles before setState: ", articles)
+                    // console.log("Value of articles before setState: ", articles)
                     if(articles === null || refresh){
                         setArticles(response.data);
                         setRefresh(false);
                         setTitle("");
                         setBody("");
                     }
-                    // articles = articles.concat(response.data);
-                    console.log("Value of articles after setState: ", articles)
+                    // console.log("Value of articles after setState: ", articles)
                 })
                 .catch(error => {
                     console.log("Error: ", error);
@@ -108,4 +109,4 @@ const AddArticle = () => {
     );
 }
 
-export default memo(AddArticle);
+export default withErrorHandler(AddArticle, axios);
