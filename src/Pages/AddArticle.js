@@ -23,10 +23,16 @@ const AddArticle = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
 
+    const [articles, setArticles] = useState([]);
+
     useEffect(() => {
         axios.get('/articles.json')
             .then(response => {
                 console.log("got it: ", response.data);
+                if(!response.data) {
+                    setArticles(response.data);
+                }
+                console.log("Articles: ", articles)
             })
             .catch(error => {
                 console.log("Error: ", error);
