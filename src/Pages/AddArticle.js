@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, memo} from 'react';
 
 import PageHeader from '../Organisms/pageHeader';
 import HeaderImage from '../assets/images/blog-header.JPG';
@@ -13,6 +13,8 @@ import Aux from '../hoc/Auxilary';
 
 const AddArticle = () => {
 
+    console.log("AddArticle runs")
+
     /*Personal Info*/
     const [name, setName] = useState("Dr Smikes");
     const [email, setEmail] = useState("abongsmike@gmail.com");
@@ -21,9 +23,19 @@ const AddArticle = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
 
+    useEffect(() => {
+        axios.get('/articles.json')
+            .then(response => {
+                console.log("got it: ", response.data);
+            })
+            .catch(error => {
+                console.log("Error: ", error);
+            })
+    }, [])
+
     const btnClickedHanler = () => {
         const newArticle = {
-            id: Date.now(),
+            articleId: Date.now(),
             author: name,
             email,
             date: Date.now(),
@@ -70,4 +82,4 @@ const AddArticle = () => {
     );
 }
 
-export default AddArticle;
+export default memo(AddArticle);

@@ -12,12 +12,14 @@ import Aux from '../hoc/Auxilary';
 
 const Blog = () => {
 
-     const [blogPosts, err] = useHttp('/posts', ['/posts']);
+     console.log("BlogPage runs")
+
+     const [blogPosts, err] = useHttp('/posts', []);
 
      let blogListing = <p>Loading...</p>
 
      if(err) {
-          blogListing = <p> Something went wrong </p>
+          blogListing = <p> Sorry, could not load blog posts. Try again later </p>
      } else if(blogPosts.length !== 0) {
           const blogs = blogPosts.slice(0,5);
           blogListing = blogs.map(blogPost => {
