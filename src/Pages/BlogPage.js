@@ -25,7 +25,7 @@ const Blog = () => {
           const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {
                return (
-                    <BlogListing   
+                    <BlogListing 
                          key={blogPost.articleId}
                          title={blogPost.title}
                          body= {blogPost.preview}
