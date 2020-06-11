@@ -5,7 +5,7 @@ import Input from '../../Atoms/Input';
 
 import Aux from '../../hoc/Auxilary';
 
-const ArticleInfo = ({title, titleChanged, body, bodyChanged}) => {
+const ArticleInfo = ({title, titleChanged,preview, previewChanged, body, bodyChanged}) => {
     return (
         <Aux>
             <hr className="my-5" />
@@ -19,6 +19,16 @@ const ArticleInfo = ({title, titleChanged, body, bodyChanged}) => {
                     required
                     initialValue={title}
                     textChanged={titleChanged}
+                />
+                <br />
+                <Input
+                    type="textarea"
+                    placeholder="A short part of your article (about 3 or 4 lines) that should appear in the blog listings"
+                    label="Preview"
+                    required
+                    rows="4"
+                    initialValue={preview}
+                    textChanged={previewChanged}
                 />
                 <br />
                 <Input

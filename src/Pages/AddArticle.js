@@ -24,6 +24,7 @@ const AddArticle = () => {
 
     /*Article Info*/
     const [title, setTitle] = useState("");
+    const [preview, setPreview] = useState("");
     const [body, setBody] = useState("");
 
     const [articles, setArticles] = useState(null);
@@ -40,6 +41,7 @@ const AddArticle = () => {
                         setRefresh(false);
                         setTitle("");
                         setBody("");
+                        setPreview("");
                     }
                     // console.log("Value of articles after setState: ", articles)
                 })
@@ -56,6 +58,7 @@ const AddArticle = () => {
             email,
             date: Date.now(),
             title,
+            preview,
             body
         }]
         console.log(newArticle)
@@ -95,6 +98,8 @@ const AddArticle = () => {
                 <ArticleInfo 
                     title={title}
                     titleChanged={event => setTitle(event.target.value)}
+                    preview={preview}
+                    previewChanged={event => setPreview(event.target.value)}
                     body={body}
                     bodyChanged={event => setBody(event.target.value)}
                 />
