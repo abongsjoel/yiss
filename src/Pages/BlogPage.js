@@ -20,7 +20,7 @@ const Blog = () => {
      let blogListing = <Spinner />;
 
      if(err) {
-          blogListing = <p> Sorry, could not load blog posts. Try again later </p>
+          blogListing = <p className="text-sec-100 font-bold"> Sorry, could not load blog posts. Try again later </p>
      } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {
