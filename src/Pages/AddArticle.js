@@ -23,37 +23,57 @@ const AddArticle = () => {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
 
-    const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState(null);
+
+    const [refresh, setRefresh] = useState(false);
 
     useEffect(() => {
-        axios.get('/articles.json')
-            .then(response => {
-                console.log("got it: ", response.data);
-                if(!response.data) {
-                    setArticles(response.data);
-                }
-                console.log("Articles: ", articles)
-            })
-            .catch(error => {
-                console.log("Error: ", error);
-            })
-    }, [])
+        
+            axios.get('/articles.json')
+                .then(response => {
+                    console.log("got it: ", response.data);
+                    console.log("Value of articles before setState: ", articles)
+                    if(articles === null || refresh){
+                        setArticles(response.data);
+                        setRefresh(false);
+                        setTitle("");
+                        setBody("");
+                    }
+                    // articles = articles.concat(response.data);
+                    console.log("Value of articles after setState: ", articles)
+                })
+                .catch(error => {
+                    console.log("Error: ", error);
+                })
+       
+    }, [articles, refresh])
 
     const btnClickedHanler = () => {
-        const newArticle = {
+        const newArticle = [{
             articleId: Date.now(),
             author: name,
             email,
             date: Date.now(),
             title,
             body
-        }
+        }]
         console.log(newArticle)
 
-        axios.post('/articles.json', newArticle)
+        let articleToPost = [];
+
+        if(!articles) {
+            articleToPost = newArticle.concat();
+        } else {
+            articleToPost = articles.concat(newArticle);
+        }
+
+        console.log("Article to Post: ", articleToPost);
+
+        axios.put('/articles.json', articleToPost)
             .then (response => {
                 console.log("Wow, your article was successfully delivered to the server");
-                console.log(response);
+                console.log(response.data);
+                setRefresh(true);
             }).catch ( error => {
                 console.log("Error: your article could not be delivered. Please try again later. ", error);
             })
