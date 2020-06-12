@@ -22,7 +22,7 @@ const withErrorHandler = ( WrappedComponent, axios ) => {
                axios.interceptors.request.eject(reqInterceptor);
                axios.interceptors.responsea.eject(resInterceptor);
            }
-        }, [])
+        }, [reqInterceptor, resInterceptor])
 
         const errorConfirmedHandler = () => {
             setErr(null);

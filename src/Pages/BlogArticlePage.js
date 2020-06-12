@@ -6,6 +6,7 @@ import { useHttp } from '../Hooks/useHttp';
 import PageHeader from '../Organisms/pageHeader';
 import Artilce from '../Molecules/Article/Article';
 import Spinner from '../Atoms/Spinner/Spinner';
+import ErrorMessage from '../Atoms/ErrorMessage';
 
 import drSmikes from '../assets/images/doc.jpg';
 import HeaderImage from '../assets/images/blog-header.JPG';
@@ -15,20 +16,19 @@ import Aux from '../hoc/Auxilary';
 
 const BlogArticle = (props) => {
 
-    const ArticleId = props.match.params.id;
+    const ArticleId = parseInt(props.match.params.id);
 
     const [blogPosts, err] = useHttp('/articles.json', []);
-    // const [comments, commentsErr] = useHttp('/comments/'+ArticleId+'.json', []);
 
-    console.log("Content of blogPosts", blogPosts);
+    // console.log("Content of blogPosts", blogPosts);
 
     let article = <Spinner />
 
     if(err) {
-        article = <p>Something went wrong</p>
+        article = <ErrorMessage>Something went wrong. Please try again later</ErrorMessage>
     } else if (blogPosts.length !== 0 ) {
         article = blogPosts.map(blogPost => {
-            if(blogPost.articleId == ArticleId){
+            if(blogPost.articleId === ArticleId){
                 article = (
                     <Artilce 
                         key={blogPost.articleId} 
@@ -43,6 +43,7 @@ const BlogArticle = (props) => {
                 );
                 return article;
             } 
+            return null;
         });
     }
 

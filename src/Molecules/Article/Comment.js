@@ -16,7 +16,7 @@ const Comment = ({articleId}) => {
 
     const [comments, commentsErr] = useHttp('/comments/'+articleId+'.json', []);
 
-    console.log("Content of comments", comments);
+    // console.log("Content of comments", comments);
 
     let articleComments = <Spinner />
 
@@ -24,7 +24,6 @@ const Comment = ({articleId}) => {
         articleComments = <ErrorMessage>Sorry, comments could not be loaded for some reason </ErrorMessage>
     } else if(comments) {
         articleComments = Object.entries(comments).reverse().map(comment => {
-            console.log(comment[1]);
             return (
                 <div className="flex items-start my-5" key={comment[1].name}>
                     <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
