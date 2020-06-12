@@ -20,7 +20,7 @@ const AddComment = ({articleId}) => {
             articleId
         }
         console.log(newComment)
-        axios.post('/comments.json', newComment)
+        axios.post('/comments/'+articleId+'.json', newComment)
             .then (response => {
                 console.log("Wow, your comment was successfully delivered to the server");
                 console.log(response.data);
