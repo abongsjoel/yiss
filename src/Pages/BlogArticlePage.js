@@ -19,14 +19,14 @@ const BlogArticle = (props) => {
     const ArticleId = props.match.params.id;
 
     const [blogPosts, err] = useHttp('/articles.json', []);
+    const [comments, commentsErr] = useHttp('/comments/'+ArticleId+'.json', []);
 
     console.log("Content of blogPosts", blogPosts);
-
-    // const [comments, commentsErr] = useHttp('/post/' + ArticleId + '/comments', []);
+    console.log("Content of comments", comments);
 
     let article = <Spinner />
 
-    if(err) {
+    if(err || commentsErr) {
         article = <p>Something went wrong</p>
     } else if (blogPosts.length !== 0 ) {
         article = blogPosts.map(blogPost => {
