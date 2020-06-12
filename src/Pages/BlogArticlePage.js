@@ -41,7 +41,7 @@ const BlogArticle = (props) => {
                         authorName={blogPost.author}
                         publishedDate={blogPost.date}
                         firstBlog
-                        // comments={comments}
+                        comments={comments}
                     />  
                 );
                 return article;

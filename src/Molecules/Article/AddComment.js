@@ -10,14 +10,15 @@ const AddComment = ({articleId}) => {
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
-    const [comment, setComment] = useState('');
+    const [body, setBody] = useState('');
 
     const btnClickedHanler = () => {
         const newComment = {
             name: fullName,
             email,
-            comment,
-            articleId
+            body,
+            articleId,
+            commentId: Date.now()
         }
         console.log(newComment)
         axios.post('/comments/'+articleId+'.json', newComment)
@@ -61,8 +62,8 @@ const AddComment = ({articleId}) => {
                     placeholder="Type your comments here" 
                     label="Comment"
                     required
-                    initialValue={comment}
-                    textChanged={(event) => setComment(event.target.value)}
+                    initialValue={body}
+                    textChanged={(event) => setBody(event.target.value)}
                 />
             </div>
             <Button text="Post Comment" btnColor="bg-main-500" type="submit" btnClicked={btnClickedHanler} />
