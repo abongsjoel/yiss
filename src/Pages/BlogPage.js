@@ -5,6 +5,7 @@ import PageHeader from '../Organisms/pageHeader';
 import BlogListing from '../Molecules/Article/BlogListing';
 import HeaderImage from '../assets/images/blog-header.JPG';
 import Spinner from '../Atoms/Spinner/Spinner';
+import ErrorMessage from '../Atoms/ErrorMessage';
 
 import drSmikes from '../assets/images/doc.jpg';
 
@@ -20,7 +21,7 @@ const Blog = () => {
      let blogListing = <Spinner />;
 
      if(err) {
-          blogListing = <p className="text-sec-100 font-bold"> Sorry, could not load blog posts. Try again later </p>
+          blogListing = <ErrorMessage>Sorry, could not load blog posts. Try again later </ErrorMessage>
      } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {

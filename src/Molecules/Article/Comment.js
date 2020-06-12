@@ -7,6 +7,7 @@ import Para from '../../Atoms/Para';
 import likeIcon from '../../assets/icons/like.svg';
 
 import Aux from '../../hoc/Auxilary';
+import Spinner from '../../Atoms/Spinner/Spinner';
 
 const Comment = ({articleId}) => {
 
@@ -16,31 +17,18 @@ const Comment = ({articleId}) => {
 
     console.log("Content of comments", comments);
 
-    const articleComments = Object.entries(comments).map(comment => {
-        console.log(comment[1]);
-        return (
-            <div className="flex items-start my-5" key={comment[1].name}>
-                <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
+    let articleComments = <Spinner />
 
-                </div>
-                <div className="w-3/5"> 
-                    <p className="text-sm font-bold"> {comment[1].name}  <span className=" font-normal text-gray-400"> |  2 hours ago</span></p>
-                    <Para  text={comment[1].body} styles="text-sm mt-2 text-gray-400" />
-                    {/* <a href="/"><p className="text-sm text-gray-900">Reply</p></a> */}
-                </div>
-            </div>
-        );
-    })
-
-    // const articleComments = comments.map(comment => {
+    // articleComments = Object.entries(comments).map(comment => {
+    //     console.log(comment[1]);
     //     return (
-    //         <div className="flex items-start my-5" key={comment.id}>
+    //         <div className="flex items-start my-5" key={comment[1].name}>
     //             <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
 
     //             </div>
     //             <div className="w-3/5"> 
-    //                 <p className="text-sm font-bold"> {comment.name}  <span className=" font-normal text-gray-400">({comment.email}) |  2 hours ago</span></p>
-    //                 <Para  text={comment.body} styles="text-sm mt-2 text-gray-400" />
+    //                 <p className="text-sm font-bold"> {comment[1].name}  <span className=" font-normal text-gray-400"> |  2 hours ago</span></p>
+    //                 <Para  text={comment[1].body} styles="text-sm mt-2 text-gray-400" />
     //                 {/* <a href="/"><p className="text-sm text-gray-900">Reply</p></a> */}
     //             </div>
     //         </div>
@@ -50,7 +38,7 @@ const Comment = ({articleId}) => {
     return (
         <Aux>
             <div className="mt-8 flex items-center">
-                <p className="text-gray-700 text-base font-bold pr-4">{comments.length} comments</p>
+                {/* <p className="text-gray-700 text-base font-bold pr-4">{comments.length} comments</p> */}
                 <div className="flex items-center cursor-pointer" onClick={() => setLikes(preLikes => preLikes + 1)}> 
                     <img src={likeIcon} alt="" className="w-4 h-4" />
                     <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
