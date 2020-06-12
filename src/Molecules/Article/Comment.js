@@ -1,13 +1,19 @@
 import React, { useState} from 'react';
 
-import Para from '../../Atoms/Para';
+import { useHttp } from '../../Hooks/useHttp';
+
+// import Para from '../../Atoms/Para';
 import likeIcon from '../../assets/icons/like.svg';
 
 import Aux from '../../hoc/Auxilary';
 
-const Comment = ({comments, articleId}) => {
+const Comment = ({articleId}) => {
 
     const [likes, setLikes] = useState(20);
+
+    const [comments, commentsErr] = useHttp('/comments/'+articleId+'.json', []);
+
+    console.log("Content of comments", comments);
 
     console.log("In comments: ", comments);
 
