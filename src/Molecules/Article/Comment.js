@@ -42,10 +42,6 @@ const Comment = ({articleId}) => {
         articleComments = <p className="text-main-200 font-semibold text-sm">Be the first to leave a comment</p>
     }
 
-    
-
- 
-
     return (
         <Aux>
             <div className="mt-8 flex items-center">
