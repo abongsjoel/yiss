@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import H1 from '../Atoms/H1';
-import Para from '../Atoms/Para';
+import H1 from '../../Atoms/H1';
+import Para from '../../Atoms/Para';
 
-import Aux from '../hoc/Auxilary';
+import Aux from '../../hoc/Auxilary';
 
 const BlogListing = ({title, body, id,  authorPic, authorName, publishedDate, firstBlog}) => {
     

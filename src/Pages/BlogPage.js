@@ -2,7 +2,7 @@ import React from 'react';
 import { useHttp } from '../Hooks/useHttp';
 
 import PageHeader from '../Organisms/pageHeader';
-import BlogListing from '../Molecules/BlogListing';
+import BlogListing from '../Molecules/Article/BlogListing';
 import HeaderImage from '../assets/images/blog-header.JPG';
 import Spinner from '../Atoms/Spinner/Spinner';
 
@@ -24,7 +24,6 @@ const Blog = () => {
      } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
           blogListing = blogs.map(blogPost => {
-               console.log("the id from sent to params is ", blogPost.articleId);
                return (
                     <BlogListing 
                          key={blogPost.articleId}
@@ -37,7 +36,7 @@ const Blog = () => {
                          firstBlog={false}
                     />
                );
-          })   
+          });   
      } else {
           // blogListing = <p className="text-main-200 font-bold">Sorry, there are no blog articles at this point. Check back later</p>
      }

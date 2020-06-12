@@ -33,13 +33,13 @@ const BlogArticle = (props) => {
             if(blogPost.articleId == ArticleId){
                 article = (
                     <Artilce 
-                        key={ArticleId} 
-                        articleId={ArticleId}
+                        key={blogPost.articleId} 
+                        articleId={blogPost.articleId}
                         title={blogPost.title}
-                        body={blogPost.body + "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. Proin a dictum dolorAenean eu ante finibus, tempor purus non, viverra tellus. Nullam cursus volutpat nunc, a placerat purus mattis eu. Etiam fringilla mattis nunc vitae convallis. Aenean eu metus eget tellus fermentum gravida. Integer rhoncus quam vitae euismod pharetra. "}
+                        body={blogPost.body}
                         authorPic={drSmikes}
-                        authorName="Dr. Acho Fon"
-                        publishedDate="03 March 2020"
+                        authorName={blogPost.author}
+                        publishedDate={blogPost.date}
                         firstBlog
                         // comments={comments}
                     />  
