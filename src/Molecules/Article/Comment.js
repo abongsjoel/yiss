@@ -23,7 +23,7 @@ const Comment = ({articleId}) => {
     if(commentsErr) {
         articleComments = <ErrorMessage>Sorry, comments could not be loaded for some reason </ErrorMessage>
     } else if(comments) {
-        articleComments = Object.entries(comments).map(comment => {
+        articleComments = Object.entries(comments).reverse().map(comment => {
             console.log(comment[1]);
             return (
                 <div className="flex items-start my-5" key={comment[1].name}>
