@@ -11,8 +11,10 @@ const AddComment = ({articleId}) => {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [body, setBody] = useState('');
+    const [submitting, setStubmitting] = useState(false);
 
     const btnClickedHanler = () => {
+        setStubmitting(true);
         const newComment = {
             name: fullName,
             email,
@@ -25,8 +27,10 @@ const AddComment = ({articleId}) => {
             .then (response => {
                 console.log("Wow, your comment was successfully delivered to the server");
                 console.log(response.data);
+                setStubmitting(false);
             }).catch ( error => {
                 console.log("Error: your comment could not be delivered");
+                setStubmitting(false);
             })
     }
 
@@ -66,7 +70,7 @@ const AddComment = ({articleId}) => {
                     textChanged={(event) => setBody(event.target.value)}
                 />
             </div>
-            <Button text="Post Comment" btnColor="bg-main-500" type="submit" btnClicked={btnClickedHanler} />
+            <Button text={submitting ? "Posting..." : "Post Comment" } btnColor="bg-main-500" type="submit" btnClicked={btnClickedHanler} />
         </div>
     );
 }

@@ -49,7 +49,7 @@ const Comment = ({articleId}) => {
     return (
         <Aux>
             <div className="mt-8 flex items-center">
-                <p className="text-gray-700 text-base font-bold pr-4">{comments ? comments.length : '0'} comment(s)</p>
+                <p className="text-gray-700 text-base font-bold pr-4">{comments ? Object.entries(comments).length : '0'} comment(s)</p>
                 <div className="flex items-center cursor-pointer" onClick={() => setLikes(preLikes => preLikes + 1)}> 
                     <img src={likeIcon} alt="" className="w-4 h-4" />
                     <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
