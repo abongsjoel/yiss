@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from '../../Atoms/Button';
 import H2 from '../../Atoms/H2';
 
-import axios from 'axios';
+import axios from '../../axios/firebase';
 import Input from '../../Atoms/Input';
 
 const AddComment = ({articleId}) => {
@@ -20,7 +20,7 @@ const AddComment = ({articleId}) => {
             articleId
         }
         console.log(newComment)
-        axios.post('/posts', newComment)
+        axios.post('/comments.json', newComment)
             .then (response => {
                 console.log("Wow, your comment was successfully delivered to the server");
                 console.log(response.data);
