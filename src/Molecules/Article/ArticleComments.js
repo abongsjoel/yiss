@@ -34,8 +34,6 @@ const ArticleComments = ({articleId}) => {
             const timeNowInMs = todayInMs % oneDayInMs;
             const midniteTodayInMs = todayInMs - (timeNowInMs + 3600000);
 
-            console.log(midniteTodayInMs);
-
             let dayShown = '';
 
             if(dayInMs > midniteTodayInMs) {
@@ -68,7 +66,6 @@ const ArticleComments = ({articleId}) => {
     } else {
         articleComments = <p className="text-main-200 font-semibold text-sm">Be the first to leave a comment</p>
     }
-
 
     return (
         <div>
