@@ -24,7 +24,7 @@ const Blog = () => {
           blogListing = <ErrorMessage>Sorry, could not load blog posts. Try again later </ErrorMessage>
      } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
-          blogListing = blogs.map(blogPost => {
+          blogListing = blogs.reverse().map(blogPost => {
                return (
                     <BlogListing 
                          key={blogPost.articleId}
