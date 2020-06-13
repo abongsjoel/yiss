@@ -19,18 +19,10 @@ const AddComment = ({articleId, postComment, submitting}) => {
             articleId,
             commentId: Date.now()
         }
-        console.log(newComment)
 
         postComment(newComment);
-        // axios.post('/comments/'+articleId+'.json', newComment)
-        //     .then (response => {
-        //         console.log("Wow, your comment was successfully delivered to the server");
-        //         console.log(response.data);
-        //         setStubmitting(false);
-        //     }).catch ( error => {
-        //         console.log("Error: your comment could not be delivered");
-        //         setStubmitting(false);
-        //     })
+
+        setBody('');     //Clear comment fill and get ready for new comment
     }
 
     return (

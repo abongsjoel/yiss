@@ -10,13 +10,9 @@ import likeIcon from '../../assets/icons/like.svg';
 
 const ArticleComments = ({articleId}) => {
 
-    console.log("ArticleComment runs");
-
     const [likes, setLikes] = useState(20);
 
     const [comments, commentsErr] = useHttp('/comments/'+articleId+'.json', []);
-
-    // console.log("Content of comments", comments);
 
     let articleComments = <Spinner />
 

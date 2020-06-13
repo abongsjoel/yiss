@@ -13,12 +13,9 @@ const Comment = ({articleId}) => {
 
     const postCommentHandler = (newComment) => {
         setStubmitting(true);
-        console.log("About to post comment", newComment);
 
         axios.post('/comments/'+articleId+'.json', newComment)
         .then (response => {
-            console.log("Wow, your comment was successfully delivered to the server");
-            console.log(response.data);
             setStubmitting(false);
         }).catch ( error => {
             console.log("Error: your comment could not be delivered");
