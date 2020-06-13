@@ -10,8 +10,6 @@ import likeIcon from '../../assets/icons/like.svg';
 
 const ArticleComments = ({articleId}) => {
 
-    const [likes, setLikes] = useState(20);
-
     const [comments, commentsErr] = useHttp('/comments/'+articleId+'.json', []);
 
     let articleComments = <Spinner />
@@ -67,15 +65,33 @@ const ArticleComments = ({articleId}) => {
         articleComments = <p className="text-main-200 font-semibold text-sm">Be the first to leave a comment</p>
     }
 
+
+    /*Now we handle the likes*/
+    const [likes, likesErr] = useHttp('/likes/'+articleId+'.json', []);
+
+    let likesValue = 0;
+
+    if(likesErr) {
+        console.log("Error with likes");
+    } else if(likes) {
+        likesValue = likes;
+    }
+
+    console.log("the value of likes is ", likes)
+
+    const likeClickHandler = () => {
+        // setLikes(preLikes => preLikes + 1)
+    }
+
     return (
         <div>
             <div className="mt-8 flex items-center">
                 <p className="text-gray-700 text-base font-bold pr-4">{comments ? Object.entries(comments).length : '0'} comment(s)</p>
-                <div className="flex items-center cursor-pointer" onClick={() => setLikes(preLikes => preLikes + 1)}> 
+                <div className="flex items-center cursor-pointer" onClick={likeClickHandler }> 
                     <img src={likeIcon} alt="" className="w-4 h-4" />
                     <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
                 </div>
-                <p className="bg-gray-300 text-xs p-1">{likes}</p>
+                <p className="bg-gray-300 text-xs p-1">{likesValue}</p>
             </div>
             <hr className="mt-1 mb-4" />
             {articleComments}
