@@ -21,15 +21,36 @@ const ArticleComments = ({articleId}) => {
     } else if(comments) {
         articleComments = Object.entries(comments).reverse().map(comment => {
 
-            const d = new Date(comment[1].time);
+            /*These 3 lines constitute a working version that does not show day for today and shows full date for other days*/
+            // const d = comment[1].date;
+            const today = new Date();
+            // const day = (d === today.toDateString()) ? "" : d;
 
-            const hours = d.getHours();
-            const minutes = d.getMinutes();
+            const t = new Date(comment[1].time);
 
-            // const date = comment[1].date + ' at ' + ((hours <= 9) ? '0' + hours : hours ) + ':' + ((minutes <= 9) ? '0' + minutes : minutes ) ;
-            const date = `${comment[1].date} at ${(hours <= 9) ? '0' + hours : hours}:${(minutes <= 9) ? '0' + minutes : minutes}`;
+            const dayInMs = t.getTime();
+            const todayInMs = today.getTime();
+            const oneDayInMs = 86400000;
+            const timeNowInMs = todayInMs % oneDayInMs;
+            const midniteTodayInMs = todayInMs - (timeNowInMs + 3600000);
 
-            console.log("my date ", date);
+            console.log(midniteTodayInMs);
+
+            let dayShown = '';
+
+            if(dayInMs > midniteTodayInMs) {
+                dayShown = 'Today';
+            } else if(dayInMs < midniteTodayInMs && dayInMs > (midniteTodayInMs + oneDayInMs)) {
+                dayShown = 'Yesterday';
+            } else {
+                dayShown = comment[1].date; //dateString from server
+            }
+    
+            const hours = t.getHours();
+            const minutes = t.getMinutes();
+            const time = `${(hours <= 9) ? '0' + hours : hours}:${(minutes <= 9) ? '0' + minutes : minutes} ${(hours < 12 ? 'am' : 'pm')}`;
+
+            const date = `${dayShown} at ${time}`;
 
             return (
                 <div className="flex items-start my-5" key={comment[1].name}>
