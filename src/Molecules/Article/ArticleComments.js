@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import { useHttp } from '../../Hooks/useHttp';
 
@@ -6,9 +6,13 @@ import Para from '../../Atoms/Para';
 import Spinner from '../../Atoms/Spinner/Spinner';
 import ErrorMessage from '../../Atoms/ErrorMessage';
 
+import likeIcon from '../../assets/icons/like.svg';
+
 const ArticleComments = ({articleId}) => {
 
     console.log("ArticleComment runs");
+
+    const [likes, setLikes] = useState(20);
 
     const [comments, commentsErr] = useHttp('/comments/'+articleId+'.json', []);
 
@@ -40,6 +44,15 @@ const ArticleComments = ({articleId}) => {
 
     return (
         <div>
+            <div className="mt-8 flex items-center">
+                <p className="text-gray-700 text-base font-bold pr-4">{comments ? Object.entries(comments).length : '0'} comment(s)</p>
+                <div className="flex items-center cursor-pointer" onClick={() => setLikes(preLikes => preLikes + 1)}> 
+                    <img src={likeIcon} alt="" className="w-4 h-4" />
+                    <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
+                </div>
+                <p className="bg-gray-300 text-xs p-1">{likes}</p>
+            </div>
+            <hr className="mt-1 mb-4" />
             {articleComments}
         </div>
     )
