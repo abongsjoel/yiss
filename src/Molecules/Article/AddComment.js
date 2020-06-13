@@ -22,7 +22,7 @@ const AddComment = ({articleId, postComment, submitting}) => {
 
         postComment(newComment);
 
-        setBody('');     //Clear comment fill and get ready for new comment
+        setBody('');     //Clear comment field and get ready for new comment
     }
 
     return (
