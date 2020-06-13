@@ -35,15 +35,13 @@ const AddArticle = () => {
             axios.get('/articles.json')
                 .then(response => {
                     console.log("got it: ", response.data);
-                    // console.log("Value of articles before setState: ", articles)
                     if(articles === null || refresh){
                         setArticles(response.data);
                         setRefresh(false);
-                        // setTitle("");
-                        // setBody("");
-                        // setPreview("");
+                        setTitle("");
+                        setBody("");
+                        setPreview("");
                     }
-                    // console.log("Value of articles after setState: ", articles)
                 })
                 .catch(error => {
                     console.log("Error: ", error);

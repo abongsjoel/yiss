@@ -33,7 +33,6 @@ export const useHttp = (url, dependencies) => {
         axios.get(url)
             .then(response => {
                 setBlogPosts(response.data);
-                console.log(blogPosts)
             })
             .catch(err => {
                 setErr(true);

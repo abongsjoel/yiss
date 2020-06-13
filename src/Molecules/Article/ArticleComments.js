@@ -20,13 +20,24 @@ const ArticleComments = ({articleId}) => {
         articleComments = <ErrorMessage>Sorry, comments could not be loaded for some reason </ErrorMessage>
     } else if(comments) {
         articleComments = Object.entries(comments).reverse().map(comment => {
+
+            const d = new Date(comment[1].time);
+
+            const hours = d.getHours();
+            const minutes = d.getMinutes();
+
+            // const date = comment[1].date + ' at ' + ((hours <= 9) ? '0' + hours : hours ) + ':' + ((minutes <= 9) ? '0' + minutes : minutes ) ;
+            const date = `${comment[1].date} at ${(hours <= 9) ? '0' + hours : hours}:${(minutes <= 9) ? '0' + minutes : minutes}`;
+
+            console.log("my date ", date);
+
             return (
                 <div className="flex items-start my-5" key={comment[1].name}>
                     <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
 
                     </div>
                     <div className="w-3/5"> 
-                        <p className="text-sm font-bold"> {comment[1].name}  <span className=" font-normal text-gray-400"> |  2 hours ago</span></p>
+                <p className="text-sm font-bold"> {comment[1].name}  <span className=" font-normal text-gray-400"> | {date}</span></p>
                         <Para  text={comment[1].body} styles="text-sm mt-2 text-gray-400" />
                         {/* <a href="/"><p className="text-sm text-gray-900">Reply</p></a> */}
                     </div>

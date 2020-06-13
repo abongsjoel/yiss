@@ -12,12 +12,17 @@ const AddComment = ({articleId, postComment, submitting}) => {
     const [body, setBody] = useState('');
 
     const btnClickedHanler = () => {
+
+        const d = new Date();
+
         const newComment = {
             name: fullName,
             email,
             body,
             articleId,
-            commentId: Date.now()
+            commentId: Date.now(),
+            date: d.toDateString(),
+            time: d
         }
 
         postComment(newComment);
