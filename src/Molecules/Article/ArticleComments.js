@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 
+import axios from '../../axios/firebase';
+
 import { useHttp } from '../../Hooks/useHttp';
 
 import Para from '../../Atoms/Para';
 import Spinner from '../../Atoms/Spinner/Spinner';
 import ErrorMessage from '../../Atoms/ErrorMessage';
+import Likes from './likes';
 
 import likeIcon from '../../assets/icons/like.svg';
 
@@ -67,6 +70,16 @@ const ArticleComments = ({articleId}) => {
 
 
     /*Now we handle the likes*/
+    /*
+        Here, we get the value of like from server and when likes is click, we just increment the value and sent it back to the server.
+        The likes component then gets the value from the server using its own axios and then shows it. 
+        However, the way this element is implemented for the moment, a client can like the article each time the page refreshes thus
+        one person can like the article multiple times.
+    */
+
+    const [liked, setLiked] = useState(false);
+    const [showLike, setShowLike] = useState(true);
+
     const [likes, likesErr] = useHttp('/likes/'+articleId+'.json', []);
 
     let likesValue = 0;
@@ -76,22 +89,35 @@ const ArticleComments = ({articleId}) => {
     } else if(likes) {
         likesValue = likes;
     }
-
-    console.log("the value of likes is ", likes)
+    
 
     const likeClickHandler = () => {
-        // setLikes(preLikes => preLikes + 1)
+        if(!liked) {
+            setShowLike(false);
+        
+            axios.put('/likes/'+articleId+'.json', ++likesValue)
+            .then (response => {
+                setShowLike(true);
+                console.log("Your like was sent to server")
+            }).catch ( error => {
+                console.log("Error: your like could not be sent to server");
+                setShowLike(true);
+            })
+        }
+
+        setLiked(true);
+        
     }
 
     return (
         <div>
             <div className="mt-8 flex items-center">
                 <p className="text-gray-700 text-base font-bold pr-4">{comments ? Object.entries(comments).length : '0'} comment(s)</p>
-                <div className="flex items-center cursor-pointer" onClick={likeClickHandler }> 
+                <div className="flex items-center cursor-pointer" onClick={likeClickHandler}> 
                     <img src={likeIcon} alt="" className="w-4 h-4" />
                     <p className="text-main-200 text-sm px-1 font-bold">Likes</p>
                 </div>
-                <p className="bg-gray-300 text-xs p-1">{likesValue}</p>
+                {showLike ? <Likes articleId={articleId} likesValue={likesValue} liked={liked} /> : null}
             </div>
             <hr className="mt-1 mb-4" />
             {articleComments}
