@@ -8,6 +8,8 @@ import ErrorMessage from '../../Atoms/ErrorMessage';
 
 const ArticleComments = ({articleId}) => {
 
+    console.log("ArticleComment runs");
+
     const [comments, commentsErr] = useHttp('/comments/'+articleId+'.json', []);
 
     // console.log("Content of comments", comments);

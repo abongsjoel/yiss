@@ -3,18 +3,15 @@ import React, { useState } from 'react';
 import Button from '../../Atoms/Button';
 import H2 from '../../Atoms/H2';
 
-import axios from '../../axios/firebase';
 import Input from '../../Atoms/Input';
 
-const AddComment = ({articleId}) => {
+const AddComment = ({articleId, postComment, submitting}) => {
 
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [body, setBody] = useState('');
-    const [submitting, setStubmitting] = useState(false);
 
     const btnClickedHanler = () => {
-        setStubmitting(true);
         const newComment = {
             name: fullName,
             email,
@@ -23,15 +20,17 @@ const AddComment = ({articleId}) => {
             commentId: Date.now()
         }
         console.log(newComment)
-        axios.post('/comments/'+articleId+'.json', newComment)
-            .then (response => {
-                console.log("Wow, your comment was successfully delivered to the server");
-                console.log(response.data);
-                setStubmitting(false);
-            }).catch ( error => {
-                console.log("Error: your comment could not be delivered");
-                setStubmitting(false);
-            })
+
+        postComment(newComment);
+        // axios.post('/comments/'+articleId+'.json', newComment)
+        //     .then (response => {
+        //         console.log("Wow, your comment was successfully delivered to the server");
+        //         console.log(response.data);
+        //         setStubmitting(false);
+        //     }).catch ( error => {
+        //         console.log("Error: your comment could not be delivered");
+        //         setStubmitting(false);
+        //     })
     }
 
     return (
