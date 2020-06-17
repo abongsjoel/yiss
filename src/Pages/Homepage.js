@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Hero from '../Organisms/Hero';
+import Hero from '../Organisms/Hero/Hero';
 import WelcomeMessage from '../Organisms/WelcomeMessage';
 import ObjectivesSection from '../Organisms/ObjectivesSection';
 import ProblemSection from '../Organisms/ProblemSection';
