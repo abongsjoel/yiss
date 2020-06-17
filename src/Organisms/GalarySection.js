@@ -2,7 +2,7 @@ import React from 'react';
 
 import H1 from '../Atoms/H1';
 import Button from '../Atoms/Button';
-import GalaryImg from '../Atoms/GalaryImg'
+import GalaryImg from '../Atoms/GalaryImg/GalaryImg'
 
 import pic1 from '../assets/galleryImages/pic1.jpg';
 import pic2 from '../assets/galleryImages/pic2.jpg';
