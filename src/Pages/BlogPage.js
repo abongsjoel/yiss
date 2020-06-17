@@ -48,7 +48,7 @@ const Blog = () => {
                <PageHeader pageName="Blog" headerImage={HeaderImage} className=' object-bottom'  />
                
                <div className="tj-container">  
-                    {blogListing}      
+                    {/* {blogListing}       */}
                </div>
           </Aux>   
      );
