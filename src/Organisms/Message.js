@@ -6,6 +6,8 @@ import H1 from '../Atoms/H1';
 import Button from '../Atoms/Button';
 import Img from '../Atoms/Img';
 
+import classes from './Message.module.css';
+
 const Message = ({headingpart1, headingpart2, content, imgSrc, imgAlt}) => (
     <div className="my-8 w-full">
         <H1 part1={headingpart1} part2={headingpart2} />
@@ -16,7 +18,7 @@ const Message = ({headingpart1, headingpart2, content, imgSrc, imgAlt}) => (
                     <Button link="about-us" text="Learn More" btnColor="blue" />
                 </div>
             </div>
-            <div className="md:w-1/2 md:ml-4">  
+            <div className={"md:w-1/2 md:ml-4 " + classes.animate}>  
                 <div className="relative pb-full sm:pb-3/4 md:pb-0 md:h-full rounded-lg overflow-hidden shadow-lg hover:shadow-2xl"> 
                     <Img 
                         src={imgSrc} 
