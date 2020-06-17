@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import H1 from '../Atoms/H1';
-import Button from '../Atoms/Button';
-import Img from '../Atoms/Img';
+import H1 from '../../Atoms/H1';
+import Button from '../../Atoms/Button';
+import Img from '../../Atoms/Img';
 
 import classes from './Message.module.css';
 

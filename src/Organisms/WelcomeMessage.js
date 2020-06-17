@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Message from './Message';
+import Message from './Message/Message';
 import MissionVision from '../Molecules/Specific/MissionVision';
 
 import welcomeImg from '../assets/images/welcome.jpg';

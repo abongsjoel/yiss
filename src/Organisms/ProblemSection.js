@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Message from './Message';
+import Message from './Message/Message';
 import Problem from '../Molecules/Specific/Problem';
 
 import problem from '../assets/images/problem.png';
