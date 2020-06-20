@@ -52,7 +52,7 @@ const ArticleComments = ({articleId}) => {
             const date = `${dayShown} at ${time}`;
 
             return (
-                <div className="flex items-start my-5" key={comment[1].name}>
+                <div className="flex items-start my-5" key={comment[1].commentId}>
                     <div className="h-12 w-12 rounded-full bg-gray-300 mr-2">
 
                     </div>

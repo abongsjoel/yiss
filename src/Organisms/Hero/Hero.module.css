@@ -18,13 +18,13 @@
 }
 
 .animation2 {
-    animation: scale-up 1s;
+    animation: scale-up 1.5s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
 }
 
 .animation3 {
     animation: top-expand 1s;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
     animation-fill-mode: backwards;
 }
