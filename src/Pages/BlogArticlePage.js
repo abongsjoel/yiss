@@ -18,14 +18,14 @@ const BlogArticle = (props) => {
 
     const ArticleId = parseInt(props.match.params.id);
 
-    const [blogPosts, err] = useHttp('/articles.json', []);
+    const [blogPosts, err, isLoading] = useHttp('/articles.json', []);
 
     // console.log("Content of blogPosts", blogPosts);
 
     let article = <Spinner />
 
-    if(err) {
-        article = <ErrorMessage>Something went wrong. Please try again later</ErrorMessage>
+    if(isLoading) {
+        article = <Spinner />
     } else if (blogPosts.length !== 0 ) {
         article = blogPosts.map(blogPost => {
             if(blogPost.articleId === ArticleId){
@@ -45,6 +45,8 @@ const BlogArticle = (props) => {
             } 
             return null;
         });
+    } else if(err) {
+        article = <ErrorMessage>Something went wrong. Please try again later</ErrorMessage>
     }
 
     return (

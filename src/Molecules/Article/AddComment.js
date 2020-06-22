@@ -27,15 +27,15 @@ const AddComment = ({articleId, postComment, submitting}) => {
 
         postComment(newComment);
 
-        setBody('');     //Clear comment field and get ready for new comment
+        setBody('');     //Clears comment field and get ready for new comment
     }
 
     return (
         <div className="mt-10"> 
             <H2 text="Leave a Reply" />
-            <div className="my-5 w-4/5">
-                <div className="flex mb-5">
-                    <div className="w-1/2 mr-2">
+            <div className="my-5 w-full lg:w-4/5">
+                <div className="md:flex">
+                    <div className="w-full md:w-1/2 md:mr-2 mb-5">
                         <Input
                             type="text" 
                             placeholder="Your full name"
@@ -45,7 +45,7 @@ const AddComment = ({articleId, postComment, submitting}) => {
                             textChanged={(event) => setFullName(event.target.value)}
                         />
                     </div>
-                    <div className="w-1/2 ml-2">
+                    <div className="w-full md:w-1/2 md:ml-2 mb-5">
                         <Input
                             type="email" 
                             placeholder="Your email address"
