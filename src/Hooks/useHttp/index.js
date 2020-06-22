@@ -7,6 +7,7 @@ export const useHttp = (url, dependencies) => {
     console.log("this is the dependency", dependencies);
     const [ blogPosts, setBlogPosts ] = useState([]);
     const [ err, setErr] = useState(false);
+    const [ isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
 
@@ -33,11 +34,13 @@ export const useHttp = (url, dependencies) => {
         axios.get(url)
             .then(response => {
                 setBlogPosts(response.data);
+                setIsLoading(false);
             })
             .catch(err => {
                 setErr(true);
+                setIsLoading(false);
             });
     }, [url]);
 
-    return [blogPosts, err]
+    return [blogPosts, err, isLoading]
 }

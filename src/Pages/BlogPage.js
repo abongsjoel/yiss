@@ -13,14 +13,16 @@ import Aux from '../hoc/Auxilary';
 
 
 const Blog = () => {
-
+     
      console.log("BlogPage runs")
-
-     const [blogPosts, err] = useHttp('/articles.json', []);
-
+     
      let blogListing = <Spinner />;
+     const [blogPosts, err, isLoading] = useHttp('/articles.json', []);
 
-     if(err) {
+
+     if(isLoading) {
+          blogListing = <Spinner />;
+     } else if (err) {
           blogListing = <ErrorMessage>Sorry, could not load blog posts. Try again later </ErrorMessage>
      } else if(blogPosts) {
           const blogs = blogPosts.slice(0,9);
@@ -39,9 +41,8 @@ const Blog = () => {
                );
           });   
      } else {
-          // blogListing = <p className="text-main-200 font-bold">Sorry, there are no blog articles at this point. Check back later</p>
+          blogListing = <p className="text-main-200 font-bold">Sorry, there are no blog articles at this point. Check back later</p>
      }
-
 
      return (
           <Aux>
