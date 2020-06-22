@@ -1,9 +1,9 @@
 import React from 'react'
 
-import H2 from '../../Atoms/H2';
-import Input from '../../Atoms/Input';
+import H2 from '../../../Atoms/H2';
+import Input from '../../../Atoms/Input';
 
-import Aux from '../../hoc/Auxilary';
+import Aux from '../../../hoc/Auxilary';
 
 const PersonalInfo = ({name, nameChanged, email, emailChanged}) => {
     return (

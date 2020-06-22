@@ -1,9 +1,10 @@
 import React from 'react'
 
-import H2 from '../../Atoms/H2';
-import Input from '../../Atoms/Input';
+import H2 from '../../../Atoms/H2';
+import Input from '../../../Atoms/Input';
+import ArticleBody from './ArticleBody';
 
-import Aux from '../../hoc/Auxilary';
+import Aux from '../../../hoc/Auxilary';
 
 const ArticleInfo = ({title, titleChanged,preview, previewChanged, body, bodyChanged}) => {
     return (
@@ -31,15 +32,7 @@ const ArticleInfo = ({title, titleChanged,preview, previewChanged, body, bodyCha
                     textChanged={previewChanged}
                 />
                 <br />
-                <Input
-                    type="textarea"
-                    placeholder="Type or paste the body of your article here"
-                    label="Body"
-                    required
-                    rows="10"
-                    initialValue={body}
-                    textChanged={bodyChanged}
-                />
+                <ArticleBody />
             </div>
         </Aux>
     )

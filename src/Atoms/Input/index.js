@@ -12,6 +12,7 @@ const Input = ({
     initialValue, 
     textChanged,
     rows,
+    labelStyle,
     cols,
     id,
     name
@@ -50,7 +51,7 @@ const Input = ({
     }
     return (
         <Aux>
-            <label className="pl-1">
+            <label className={"pl-1 " + labelStyle}>
                 {label}
                 <span className="text-red-700">{required ? " *" : null}</span>
                 <span className="text-sm text-gray-500 font-light">{hint ? " ("+hint+")" : null}</span>

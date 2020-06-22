@@ -4,8 +4,8 @@ import PageHeader from '../Organisms/pageHeader';
 import HeaderImage from '../assets/images/blog-header.JPG';
 import Button from '../Atoms/Button';
 import H1 from '../Atoms/H1';
-import PersonalInfo from '../Molecules/Article/PersonalInfo';
-import ArticleInfo from '../Molecules/Article/ArticleInfor';
+import PersonalInfo from '../Molecules/Article/AddArticle/PersonalInfo';
+import ArticleInfo from '../Molecules/Article/AddArticle/ArticleInfor';
 import Modal from '../Atoms/Modal/Modal';
 
 // import axios from '../axios/jsonPlaceHolder';
@@ -111,7 +111,7 @@ const AddArticle = () => {
                     titleChanged={event => setTitle(event.target.value)}
                     preview={preview}
                     previewChanged={event => setPreview(event.target.value)}
-                    body={body}
+                    body={body}  
                     bodyChanged={event => setBody(event.target.value)}
                 />
                 <Button 
