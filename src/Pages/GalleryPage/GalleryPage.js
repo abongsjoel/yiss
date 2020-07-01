@@ -19,15 +19,18 @@ const GalleryPage = () => {
         <Aux>
             <PageHeader pageName="Yiss in Pictures" headerImage={HeaderImage} />
 
-            <div className={classes.Galery}>
-                {/* <GalaryImg src={pic1}/>
-                <GalaryImg src={pic2}/>
-                <GalaryImg src={pic3}/>
-                <GalaryImg src={pic4}/>
-                <GalaryImg src={pic5}/> */}
+            <div className="tj-container">
+                <div className={classes.Galery}>
+                    <GalaryImg src={pic1}/>
+                    <GalaryImg src={pic2}/>
+                    <GalaryImg src={pic3}/>
+                    <GalaryImg src={pic4}/>
+                    <GalaryImg src={pic5}/>
+                </div>
             </div>
 
-            <p className={classes.Galery}>This is the GalleryPage</p>
+
+            {/* <p className={classes.Galery}>This is the GalleryPage</p> */}
         </Aux>
     )
 }
