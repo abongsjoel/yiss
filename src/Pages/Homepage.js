@@ -15,7 +15,7 @@ const Homepage = () => (
         <ObjectivesSection />
         <ProblemSection />
         <GalarySection />
-    </Aux>   
+    </Aux>     
 );
 
 
