@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './GalaryImg.module.css';
 
-const GaleryImg = ({src, alt, styles}) => (
+const GaleryImg = ({src, alt}) => (
     <a href={src}>
         <img 
             src={src} 

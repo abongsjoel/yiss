@@ -9,7 +9,7 @@ import BlogPage from './Pages/BlogPage';
 import BlogArticle from './Pages/BlogArticlePage';
 import ContactUsPage from './Pages/ContactUsPage';
 import AddArticle from './Pages/AddArticle';
-import GalleryPage from './Pages/GalleryPage';
+import GalleryPage from './Pages/GalleryPage/GalleryPage';
 
 function App() {
 
