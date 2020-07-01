@@ -26,6 +26,11 @@ const GalleryPage = () => {
                     <GalaryImg src={pic3}/>
                     <GalaryImg src={pic4}/>
                     <GalaryImg src={pic5}/>
+                    <GalaryImg src={pic1}/>
+                    <GalaryImg src={pic2}/>
+                    <GalaryImg src={pic3}/>
+                    <GalaryImg src={pic4}/>
+                    <GalaryImg src={pic5}/>
                 </div>
             </div>
         </Aux>
