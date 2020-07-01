@@ -28,9 +28,6 @@ const GalleryPage = () => {
                     <GalaryImg src={pic5}/>
                 </div>
             </div>
-
-
-            {/* <p className={classes.Galery}>This is the GalleryPage</p> */}
         </Aux>
     )
 }
