@@ -39,10 +39,10 @@ const Galary = () => (
                 </div>
             </div>
             <div className="mt-8">
-                <Button link="" text="View All" btnColor="blue" />
+                <Button link="/gallery" text="View All" btnColor="blue" />
             </div>
         </div>
     </div>
 );
 
-export default Galary;
+export default Galary;  
