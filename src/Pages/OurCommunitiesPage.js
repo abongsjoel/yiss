@@ -3,9 +3,10 @@ import React from 'react';
 import PageHeader from '../Organisms/pageHeader';
 import SubMessage from '../Molecules/SubMessage';
 
+import HeaderImage from '../assets/images/communities.jpg';
+
 import Aux from '../hoc/Auxilary';
 
-import HeaderImage from '../assets/images/communities.jpg';
 
 const OurCommunitiesPage = () => (
     <Aux>
