@@ -1,3 +1,53 @@
+
+# YISS (Young Investors Science Society Website)
+
+> This is a website for a group for medical students in Cameroon.
+
+![screenshot](../master/screenshot.png)
+
+In this project, i built a responsive web application. The website includes a blog page that is a complete application on its own built using a variety of cools. Only the administrators can add articles to the website, but visitors can comment and like articles.
+
+## Live Demo 
+
+- [Visit Page](https://yissgroup.com/)
+
+## Built With
+
+- HTML
+- CSS
+- JavaScript
+- Firebase
+
+## Frameworks
+
+- Reactjs
+- Tailwind css
+
+## Author
+
+👤 **Chi A. Joel**
+
+- GitHub: [@abongsjoel](https://github.com/abongsjoel)
+- Twitter: [@thierryjoel10](https://twitter.com/ThierryJoel10)
+- LinkedIn: [Chi Abongwa Joel](https://www.linkedin.com/in/chi-abongwa-joel-b4285a97/)
+
+## Acknowledgments
+
+- [Dr. Acho Fon Abongwa](https://www.linkedin.com/in/achomichael/)
+
+
+## Show your support
+<p> Give a 
+  <g-emoji class="g-emoji" alias="star" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png"><img class="emoji" alt="star" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png"></g-emoji>
+  if you like this project!</p>
+
+## License
+  <p>This project is <a href="../Features/LICENSE">MIT</a> licensed.</p>
+
+
+
+## The React Framework
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
