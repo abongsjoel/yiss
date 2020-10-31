@@ -5,7 +5,7 @@
 
 ![screenshot](../master/screenshot.png)
 
-In this project, i built a responsive web application. The website includes a blog page that is a complete application on its own built using a variety of cools. Only the administrators can add articles to the website, but visitors can comment and like articles.
+In this project, i built a responsive web application. The website includes a blog page that is a complete application on its own built using a variety of tools. Only the administrators can add articles to the website, but visitors can comment and like articles.
 
 ## Live Demo 
 
