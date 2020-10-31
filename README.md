@@ -42,7 +42,7 @@ In this project, i built a responsive web application. The website includes a bl
   if you like this project!</p>
 
 ## License
-  <p>This project is <a href="../Features/LICENSE">MIT</a> licensed.</p>
+  <p>This project is <a href="../master/LICENSE">MIT</a> licensed.</p>
 
 
 
