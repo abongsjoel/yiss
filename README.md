@@ -5,7 +5,9 @@
 
 ![screenshot](../master/screenshot.png)
 
-In this project, i built a responsive web application using Reactjs (making use of the React Hooks system) and Tailwind-css. I also made use of styled-components in some areas. I made use of react-routers to navigate to the different pages in the site. The website includes a blog page that is a complete application on its own built using a variety of tools. I used Firebase for database storage and axios to query the database. Only the administrators can add articles to the website, but visitors can comment and like articles.
+In this project, i built a responsive web application using Reactjs (making use of the React Hooks system) and Tailwind-css. I also made use of styled-components in some areas. I made use of react-routers to navigate to the different pages in the site. 
+
+The website includes a blog page that is a complete application on its own built using a variety of tools. I used Firebase for database storage and axios to query the database. Only the administrators can add articles to the website, but visitors can comment and like articles.
 
 ## Live Demo 
 
