@@ -37,6 +37,12 @@ The website includes a blog page that is a complete application on its own built
 
 - [Dr. Acho Fon Abongwa](https://www.linkedin.com/in/achomichael/)
 
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/abongsjoel/yiss/issues).
+
 
 ## Show your support
 Give a ⭐️ if you like this project!
