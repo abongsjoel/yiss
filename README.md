@@ -11,7 +11,7 @@ The website includes a blog page that is a complete application on its own built
 
 ## Live Demo 
 
-- [Visit Page](https://yissgroup.com/)
+- [Visit Page](https://yiss-website.abongsjoel.now.sh/)
 
 ## Built With
 
